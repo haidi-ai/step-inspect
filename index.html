@@ -141,6 +141,11 @@
   footer a{color:#5eead4}
   footer .wrap{display:flex;gap:18px;justify-content:space-between;flex-wrap:wrap}
   footer p{margin:0 0 .4em}
+  footer .social{flex:1 1 100%;border-top:1px solid #1e293b;padding-top:18px;margin-top:6px}
+  footer .social h3{font-size:.95rem;color:#e2e8f0;margin-bottom:.5em}
+  footer .social .xhs-list{list-style:none;margin:0 0 .5em;padding:0;display:grid;gap:6px}
+  footer .social .xhs-list a{word-break:break-word}
+  footer .social .note{color:#94a3b8;font-size:.8rem}
   .skip{position:absolute;left:-9999px}
   .skip:focus{left:12px;top:12px;background:#fff;padding:8px 12px;border-radius:8px;z-index:99}
   /* print: only the sample report block prints sensibly; keep page clean */
@@ -432,6 +437,19 @@
     <div>
       <p>页面自检：零外部依赖 · 无统计脚本 · 无软件分发</p>
       <p><a href="sample-report.html">样例报告</a> · <a href="#pricing">报价</a> · <a href="#faq">FAQ</a> · <a href="#disclaimer">免责</a></p>
+    </div>
+    <div class="social" aria-label="关注我们">
+      <h3>关注我们</h3>
+      <p><b>知乎</b>：<a href="https://www.zhihu.com/people/wqb3m">主页</a> ·
+        <a href="https://zhuanlan.zhihu.com/p/2108291943465862798">AI 画出来的零件，为什么打印不出来？</a> ·
+        <a href="https://zhuanlan.zhihu.com/p/2108292284097811997">STEP 文件路径带中文，为什么程序会崩？</a></p>
+      <p><b>小红书</b>（需 App 打开）：</p>
+      <ul class="xhs-list">
+        <li><a href="https://www.xiaohongshu.com/discovery/item/6b0434ac000000001802925e?app_platform=harmony&amp;app_version=9.54.0&amp;share_from_user_hidden=true&amp;xsec_source=app_share&amp;type=normal&amp;xsec_token=CBnxcAKdRDePhQTp62xL-qmi09wx22Fl-kVQyGjAqu8p4=&amp;author_share=1&amp;share_id=357b7ae29e3245368cdd93e3723d282e&amp;track_code=2e2IBtJzPqm&amp;&amp;apptime=1795439477&amp;xhsshare=WeixinSession">AI 画的零件为什么打不出来</a></li>
+        <li><a href="https://www.xiaohongshu.com/discovery/item/6b0435b6000000002b003b5f?app_platform=harmony&amp;app_version=9.54.0&amp;share_from_user_hidden=true&amp;xsec_source=app_share&amp;type=normal&amp;xsec_token=CBnxcAKdRDePhQTp62xL-qmmjLDhjsGpF0zDjm2r2_PAA=&amp;author_share=1&amp;share_id=a41ac1539d0f4b709d56a022f42898b1&amp;track_code=3wcbmmSX5Xx&amp;&amp;apptime=1795439464&amp;xhsshare=WeixinSession">STEP 文件中文路径会崩</a></li>
+        <li><a href="https://www.xiaohongshu.com/discovery/item/6b04362e0000000009020fc1?app_platform=harmony&amp;app_version=9.54.0&amp;share_from_user_hidden=true&amp;xsec_source=app_share&amp;type=normal&amp;xsec_token=CBnxcAKdRDePhQTp62xL-qmqdsFH-Ff9vzFLlB2Mw6vR8=&amp;author_share=1&amp;share_id=45235e4c16f54bb8bf1bdf9fe57fdbeb&amp;track_code=5DUQZBwVlHp&amp;&amp;apptime=1795439409&amp;xhsshare=WeixinSession">隐藏线怎么在网页里做</a></li>
+      </ul>
+      <p class="note">小红书链接为原始分享链接、保留完整 query（含 xsec_token），需用 App 打开；网页端可能提示内容不存在。</p>
     </div>
   </div>
 </footer>

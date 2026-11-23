@@ -1,14 +1,14 @@
 {
   "task": "T-0741",
   "name": "ZNGL 几何体检 · 商机落地页（无 dist 静态页）",
-  "generated_at": "2026-11-23T20:00:00+08:00",
+  "generated_at": "2026-11-23T21:20:00+08:00",
   "license_scope": "页面仅含截图/样例/报价/表单说明；不含 ZNGL dist、ZNK 二进制、SDK 或任何可执行文件",
   "deploy_root": "index.html",
   "files": [
     {
       "path": "index.html",
-      "bytes": 29771,
-      "sha256": "E7AF22CE196239536340462365BE5E775CEA0E2BFE1993CFC00A60AB705844B4"
+      "bytes": 32196,
+      "sha256": "A6FC946D0E2F400007AB4DD13DC6F3C956C6236A3BE9C5458CAFDC71300A0CFD"
     },
     {
       "path": "sample-report.html",
@@ -134,6 +134,11 @@
         "name": "打印仿真：内容高度 ≤ A4 可用高度",
         "ok": true,
         "detail": "docHeight=1062 limit=1062"
+      },
+      {
+        "name": "T-0762 footer「关注我们」6 条链接、console 无 error、375 不溢出",
+        "ok": true,
+        "detail": "{\"socialLinks\":6,\"zhihu\":3,\"xhs\":3,\"consoleErrors\":0,\"exceptions\":0,\"scrollWidth375\":375,\"overflow375\":0,\"overflow1280\":0}"
       }
     ],
     "browser": "Chrome/157.0.8103.79",
@@ -175,7 +180,20 @@
   "totals": {
     "deploy_files": 8,
     "listed_files": 7,
-    "deploy_bytes_excl_manifest": 433133,
-    "manifest_bytes": 5805
-  }
+    "deploy_bytes_excl_manifest": 435558,
+    "manifest_bytes": 6730
+  },
+  "amendments": [
+    {
+      "task": "T-0762",
+      "at": "2026-11-23T21:20:00+08:00",
+      "change": "footer 增加「关注我们」：知乎主页 + 知乎 2 篇文章 + 小红书 3 篇（保留完整 query，需 App 打开）。正文结构、报价、免责未改。",
+      "evidence": {
+        "index_sha256": "A6FC946D0E2F400007AB4DD13DC6F3C956C6236A3BE9C5458CAFDC71300A0CFD",
+        "index_bytes": 32196,
+        "headless": "工作区 tmp verify.mjs (Chrome 157 headless, CDP)",
+        "result": "consoleErrors=0 exceptions=0 footerSocialLinks=6 (zhihu 3 / xhs 3) overflow@375=0 overflow@1280=0"
+      }
+    }
+  ]
 }
