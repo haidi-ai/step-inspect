@@ -1,0 +1,181 @@
+{
+  "task": "T-0741",
+  "name": "ZNGL 几何体检 · 商机落地页（无 dist 静态页）",
+  "generated_at": "2026-11-23T20:00:00+08:00",
+  "license_scope": "页面仅含截图/样例/报价/表单说明；不含 ZNGL dist、ZNK 二进制、SDK 或任何可执行文件",
+  "deploy_root": "index.html",
+  "files": [
+    {
+      "path": "index.html",
+      "bytes": 29771,
+      "sha256": "E7AF22CE196239536340462365BE5E775CEA0E2BFE1993CFC00A60AB705844B4"
+    },
+    {
+      "path": "sample-report.html",
+      "bytes": 9186,
+      "sha256": "81844F6C4AB0941E950DF25AEA9FE9142212F70A5C9F6C5B34C8CF811FAC07DB"
+    },
+    {
+      "path": "img/demo.png",
+      "bytes": 33961,
+      "sha256": "DC1CE767E8014030096B41C67EF310BC823BD4A05D891B51ADE0BF5C987A851D"
+    },
+    {
+      "path": "img/A-demo-holed.png",
+      "bytes": 176564,
+      "sha256": "F1FD350FE59771560BFDE9DC555ADEE95C3DC37B69798CA17AC4B2B6F59EDD56"
+    },
+    {
+      "path": "img/B-upload-holed.png",
+      "bytes": 174826,
+      "sha256": "B10D091223512FD7CFBEE26A37B5A0C19024ECA7D31272EAA27771F39D7C3A10"
+    },
+    {
+      "path": "img/SHA256SUMS.txt",
+      "bytes": 978,
+      "sha256": "EF2F85B1BD25D322626C45A5574B2D9F2F9AE80947BD0AA9DF5CBF3F939C05F7"
+    },
+    {
+      "path": "README-DEPLOY.md",
+      "bytes": 7847,
+      "sha256": "B6022E713FB0234DA88A4ABE1BFF5B4F6353B912BE70DA425A3385A7942CEC13"
+    }
+  ],
+  "source_images": {
+    "demo.png": {
+      "source": "D:\\ai-crew-data\\t0705\\r5\\tests\\merge-verify\\shots\\demo.png",
+      "source_bytes": 33961,
+      "source_sha256": "DC1CE767E8014030096B41C67EF310BC823BD4A05D891B51ADE0BF5C987A851D",
+      "copy": "img/demo.png",
+      "copy_bytes": 33961,
+      "sha256": "DC1CE767E8014030096B41C67EF310BC823BD4A05D891B51ADE0BF5C987A851D",
+      "match": true
+    },
+    "A-demo-holed.png": {
+      "source": "D:\\ai-crew-data\\t0711\\evidence-final\\A-demo-holed.png",
+      "source_bytes": 176564,
+      "source_sha256": "F1FD350FE59771560BFDE9DC555ADEE95C3DC37B69798CA17AC4B2B6F59EDD56",
+      "copy": "img/A-demo-holed.png",
+      "copy_bytes": 176564,
+      "sha256": "F1FD350FE59771560BFDE9DC555ADEE95C3DC37B69798CA17AC4B2B6F59EDD56",
+      "match": true
+    },
+    "B-upload-holed.png": {
+      "source": "D:\\ai-crew-data\\t0711\\evidence-final\\B-upload-holed.png",
+      "source_bytes": 174826,
+      "source_sha256": "B10D091223512FD7CFBEE26A37B5A0C19024ECA7D31272EAA27771F39D7C3A10",
+      "copy": "img/B-upload-holed.png",
+      "copy_bytes": 174826,
+      "sha256": "B10D091223512FD7CFBEE26A37B5A0C19024ECA7D31272EAA27771F39D7C3A10",
+      "match": true
+    }
+  },
+  "forbidden_scan": {
+    "forbidden_ext_files": [],
+    "external_script_src": [],
+    "external_link_href": [],
+    "download_attr": 0,
+    "mentions_zngl_js": 0
+  },
+  "verify": {
+    "ok": true,
+    "checks": [
+      {
+        "name": "console 无 error / 无未捕获异常",
+        "ok": true,
+        "detail": "{\"consoleErrors\":[],\"exceptions\":[]}"
+      },
+      {
+        "name": "图片 3 张全部加载（naturalWidth>0）",
+        "ok": true,
+        "detail": "[{\"src\":\"img/A-demo-holed.png\",\"complete\":true,\"w\":1422,\"h\":1104},{\"src\":\"img/B-upload-holed.png\",\"complete\":true,\"w\":1422,\"h\":1104},{\"src\":\"img/demo.png\",\"complete\":true,\"w\":782,\"h\":504}]"
+      },
+      {
+        "name": "mailto 地址全部为 huishanzhao@126.com",
+        "ok": true,
+        "detail": "[\"mailto:huishanzhao@126.com?subject=【几何体检咨询】STEP 零件（1 件）&body\",\"mailto:huishanzhao@126.com?subject=【几何体检咨询】&body=你好，我想做 STEP\",\"mailto:huishanzhao@126.com\"]"
+      },
+      {
+        "name": "表单生成 mailto 含字段与主题",
+        "ok": true,
+        "detail": "{\"subject\":\"【几何体检咨询】测试公司一\",\"head\":\"你好，我想做 STEP 几何体检。\\n\\n公司/团队：测试公司一\\n称呼：张三\\n联系方式：test@example.com\\n零\"}"
+      },
+      {
+        "name": "桌面 1440 无横向溢出",
+        "ok": true,
+        "detail": "scrollWidth=1440 client=1440 over=0"
+      },
+      {
+        "name": "移动 375 无横向溢出",
+        "ok": true,
+        "detail": "scrollWidth=375 client=375 over=0 []"
+      },
+      {
+        "name": "样例报告移动 375 无横向溢出",
+        "ok": true,
+        "detail": "scrollWidth=375 client=375"
+      },
+      {
+        "name": "零外部脚本/样式",
+        "ok": true,
+        "detail": "{\"scripts\":[],\"links\":[]}"
+      },
+      {
+        "name": "无 HTTP 4xx/5xx、无资源加载失败",
+        "ok": true,
+        "detail": "{\"httpErrors\":[],\"failed\":[]}"
+      },
+      {
+        "name": "样例报告打印为 1 页（PDF /Type /Page 计数）",
+        "ok": true,
+        "detail": "pages=1 bytes=254021"
+      },
+      {
+        "name": "打印仿真：内容高度 ≤ A4 可用高度",
+        "ok": true,
+        "detail": "docHeight=1062 limit=1062"
+      }
+    ],
+    "browser": "Chrome/157.0.8103.79",
+    "pdf": {
+      "pages": 1,
+      "bytes": 254021
+    },
+    "desktop": {
+      "scrollWidth": 1440,
+      "clientWidth": 1440,
+      "overflowCount": 0
+    },
+    "mobile": {
+      "scrollWidth": 375,
+      "clientWidth": 375,
+      "overflowCount": 0
+    },
+    "images": [
+      {
+        "src": "img/A-demo-holed.png",
+        "complete": true,
+        "w": 1422,
+        "h": 1104
+      },
+      {
+        "src": "img/B-upload-holed.png",
+        "complete": true,
+        "w": 1422,
+        "h": 1104
+      },
+      {
+        "src": "img/demo.png",
+        "complete": true,
+        "w": 782,
+        "h": 504
+      }
+    ]
+  },
+  "totals": {
+    "deploy_files": 8,
+    "listed_files": 7,
+    "deploy_bytes_excl_manifest": 433133,
+    "manifest_bytes": 5805
+  }
+}

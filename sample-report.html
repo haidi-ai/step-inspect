@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>几何体检报告 · 样例（脱敏） | ZNGL</title>
+<style>
+  :root{--ink:#111827;--muted:#4b5563;--line:#d1d5db;--soft:#6b7280;--brand:#0f766e;--reject:#b91c1c;--cj:#6b7280;--cjbg:#ececec}
+  *{box-sizing:border-box}
+  body{margin:0;background:#e5e7eb;color:var(--ink);
+    font-family:"PingFang SC","Microsoft YaHei","Hiragino Sans GB",system-ui,-apple-system,"Segoe UI",sans-serif;
+    font-size:13px;line-height:1.5}
+  .sheet{width:min(860px,100%);margin:24px auto;background:#fff;padding:30px 34px;box-shadow:0 2px 14px rgba(0,0,0,.10)}
+  .samplebar{background:#fef3c7;border:1px solid #fcd34d;color:#78350f;border-radius:8px;padding:8px 12px;font-size:12px;margin-bottom:16px}
+  header{display:flex;justify-content:space-between;gap:16px;border-bottom:2px solid var(--ink);padding-bottom:10px;flex-wrap:wrap}
+  h1{font-size:20px;margin:0 0 2px}
+  .sub{font-size:11.5px;color:var(--soft)}
+  .meta{font-size:11.5px;color:var(--muted);text-align:right}
+  .meta b{color:var(--ink)}
+  h2{font-size:13px;margin:16px 0 6px;padding-left:8px;border-left:4px solid var(--brand);letter-spacing:.02em}
+  table{border-collapse:collapse;width:100%;font-size:11.8px}
+  th,td{border:1px solid var(--line);padding:5px 7px;vertical-align:top;text-align:left}
+  th{background:#f3f4f6;font-weight:700;color:#374151}
+  .big{display:flex;gap:8px;margin:8px 0}
+  .bx{flex:1;border:1px solid var(--line);border-radius:6px;padding:6px 9px}
+  .bx .n{font-size:18px;font-weight:800;line-height:1.1}
+  .bx .t{font-size:10.5px;color:var(--soft)}
+  .bx.a .n{color:var(--brand)}.bx.r .n{color:var(--reject)}.bx.c .n{color:var(--cj)}
+  .verdict{border:1px solid #fecaca;background:#fef2f2;color:#7f1d1d;padding:7px 10px;border-radius:6px;font-size:12.5px;font-weight:700}
+  .tag{display:inline-block;padding:1px 7px;border-radius:999px;font-size:10.5px;font-weight:700;white-space:nowrap}
+  .tag.allow{background:#ccfbf1;color:#0f766e}
+  .tag.reject{background:#fee2e2;color:#b91c1c}
+  .tag.cj{background:var(--cjbg);color:var(--cj)}
+  .note{font-size:11px;color:var(--muted);margin:4px 0 0}
+  .boundary{background:#f9fafb;border:1px solid var(--line);border-radius:6px;padding:9px 12px;font-size:11.5px;color:#374151}
+  ol{margin:4px 0 0;padding-left:18px}
+  li{margin-bottom:2px}
+  footer{margin-top:14px;border-top:1px solid var(--line);padding-top:8px;font-size:10.5px;color:var(--soft);display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap}
+  a{color:var(--brand);text-decoration:none}
+  @media print{
+    body{background:#fff;font-size:11px;line-height:1.4}
+    .sheet{width:auto;margin:0;box-shadow:none;padding:0}
+    .samplebar{background:#fff;border:1px dashed #b45309;font-size:10px;padding:6px 9px;margin-bottom:9px}
+    header{padding-bottom:7px}
+    h1{font-size:18px}
+    .sub{font-size:10px}
+    .meta{font-size:10px}
+    h2{font-size:11.6px;margin:11px 0 5px;padding-left:6px;border-left-width:3px}
+    table{font-size:10.4px}
+    th,td{padding:3.5px 5px}
+    .big{gap:6px;margin:7px 0}
+    .bx{padding:4px 7px}
+    .bx .n{font-size:16px}
+    .bx .t{font-size:9.4px}
+    .verdict{padding:6px 9px;font-size:11px}
+    .tag{font-size:9.4px;padding:0 6px}
+    .note{font-size:9.6px;margin-top:3px}
+    .boundary{padding:7px 9px;font-size:10px}
+    footer{margin-top:9px;padding-top:6px;font-size:9.4px}
+    @page{size:A4;margin:8mm}
+  }
+  @media (max-width:640px){
+    .sheet{padding:18px 14px;margin:0}
+    .meta{text-align:left}
+    table{font-size:11px}
+    th,td{padding:4px 5px}
+  }
+</style>
+</head>
+<body>
+<div class="sheet">
+
+  <div class="samplebar"><b>样例报告（脱敏）</b> · 客户为虚构"样例客户"，零件为内置样例件；计数与真机截图一致，逐条证据列为演示占位，<b>不构成任何真实零件结论</b>。返回 <a href="index.html">落地页</a>。</div>
+
+  <header>
+    <div>
+      <h1>几何体检报告</h1>
+      <div class="sub">报告号 J-20261123-SAMPLE-R1 · 规则集：10 条 · 报告日期：2026-11-23 · 版本：v1</div>
+    </div>
+    <div class="meta">
+      客户：<b>样例客户（虚构）</b><br>
+      零件：<b>四孔板 120×80×20（内置样例）</b><br>
+      输入：STEP · 17.8 KB · 单位 mm
+    </div>
+  </header>
+
+  <h2>一、结论</h2>
+  <div class="verdict">总体判定：建议修改后打印（存在 1 条 reject，需人工确认；这不是合格结论）。</div>
+  <div class="big">
+    <div class="bx a"><div class="n">5</div><div class="t">allow 允许（≠整体合格）</div></div>
+    <div class="bx r"><div class="n">1</div><div class="t">reject 不通过</div></div>
+    <div class="bx c"><div class="n">4</div><div class="t">cannot_judge 未判定</div></div>
+    <div class="bx"><div class="n">10</div><div class="t">规则总数（5+1+4=10）</div></div>
+  </div>
+  <p class="note">一句话：4 个 Ø10 通孔的穿透余量被判为不通过；4 条规则证据不足（未判定），未发现非流形。未判定 ≠ 合格。</p>
+
+  <h2>二、关键风险（最多 3 条）</h2>
+  <table>
+    <thead><tr><th style="width:5%">#</th><th style="width:30%">规则</th><th style="width:12%">判定</th><th>证据（样例占位）</th><th style="width:26%">建议</th></tr></thead>
+    <tbody>
+      <tr><td>1</td><td>manufacturing/hole_penetration</td><td><span class="tag reject">reject</span></td><td>4 处 Ø10 通孔，孔口穿透余量不足</td><td>确认孔是否需完全穿透，或补余量后复检</td></tr>
+      <tr><td>2</td><td>assembly/interference</td><td><span class="tag cj">未判定</span></td><td>仅单件，无装配体</td><td>补装配体后复判</td></tr>
+      <tr><td>3</td><td>manufacturing/draft_angle</td><td><span class="tag cj">未判定</span></td><td>非注塑件，未给拔模要求</td><td>若为注塑件，补工艺参数后复判</td></tr>
+    </tbody>
+  </table>
+
+  <h2>三、逐条规则（10/10，按规则 id 顺序）</h2>
+  <table>
+    <thead><tr><th style="width:4%">#</th><th style="width:32%">规则 id</th><th style="width:10%">判定</th><th>说明 / 证据（样例占位）</th></tr></thead>
+    <tbody>
+      <tr><td>1</td><td>manufacturing/min_wall_thickness</td><td><span class="tag allow">allow</span></td><td>板厚 20 mm，规则范围内未见低于阈值</td></tr>
+      <tr><td>2</td><td>manufacturing/hole_penetration</td><td><span class="tag reject">reject</span></td><td>4×Ø10 通孔，孔口穿透余量不足（对应截图 reject=孔穿透余量）</td></tr>
+      <tr><td>3</td><td>manufacturing/draft_angle</td><td><span class="tag cj">未判定</span></td><td>非注塑件，无拔模要求，规则不适用</td></tr>
+      <tr><td>4</td><td>manufacturing/sliver_face</td><td><span class="tag allow">allow</span></td><td>未见长宽比超限的细长面</td></tr>
+      <tr><td>5</td><td>quality/non_manifold</td><td><span class="tag allow">allow</span></td><td>闭合 true，壳数 1，未见非流形边</td></tr>
+      <tr><td>6</td><td>assembly/interference</td><td><span class="tag cj">未判定</span></td><td>只给单件，无装配体，无法判干涉</td></tr>
+      <tr><td>7</td><td>manufacturing/blade_thin_section</td><td><span class="tag cj">未判定</span></td><td>非叶片类零件，规则不适用</td></tr>
+      <tr><td>8</td><td>manufacturing/hole_depth_ratio</td><td><span class="tag allow">allow</span></td><td>孔深/孔径 = 2.0，未超规则适用范围</td></tr>
+      <tr><td>9</td><td>manufacturing/sharp_internal_corner</td><td><span class="tag allow">allow</span></td><td>矩形板内角 ≥ 90°，未见尖内角</td></tr>
+      <tr><td>10</td><td>quality/small_feature</td><td><span class="tag cj">未判定</span></td><td>特征尺寸接近网格分辨率，证据不足</td></tr>
+    </tbody>
+  </table>
+
+  <h2>四、边界与限制</h2>
+  <div class="boundary">
+    输入限制：仅单件、无装配体 → 干涉规则不可判；材料/工艺参数未给 → 壁厚阈值用默认值。<br>
+    规则限制：规则集未覆盖支撑、翘曲、残余应力、表面粗糙度。<br>
+    版本限制：规则集 10 条；曲面部分走近似，误差界见证据。数据保留：项目结束 30 天删除（<b>待法务确认</b>）。
+  </div>
+
+  <h2>五、免责声明（完整，不得删）</h2>
+  <div class="boundary">
+    本报告为基于客户提供文件与当前规则集的工程复核意见，仅供客户内部报价/工艺参考。<b>不构成制造保证</b>：不保证零件可打印、不保证强度/公差/寿命/表面质量/行业认证，不构成设计责任转移，不替代客户自身的工艺验证与最终放行。cannot_judge 表示证据不足或规则未覆盖，<b>不等于合格</b>。因客户文件错误、版本不符、未披露装配/材料信息导致的后果，不由本报告承担。
+  </div>
+
+  <footer>
+    <span>样例文件 · 无真实客户信息 · 不构成任何真实零件结论</span>
+    <span>本页零外部依赖，无脚本、无统计 · <a href="index.html">返回报价页</a></span>
+  </footer>
+</div>
+</body>
+</html>

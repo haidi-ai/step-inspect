@@ -1,0 +1,5 @@
+# T-0741 screenshot SHA256 record (original + copy), generated 2026-11-23
+# format: SHA256  bytes  filename   (source=<original path>; match=True means identical)
+DC1CE767E8014030096B41C67EF310BC823BD4A05D891B51ADE0BF5C987A851D  33961  img/demo.png  (source=D:\ai-crew-data\t0705\r5\tests\merge-verify\shots\demo.png; source_bytes=33961; source_sha256=DC1CE767E8014030096B41C67EF310BC823BD4A05D891B51ADE0BF5C987A851D; match=True)
+F1FD350FE59771560BFDE9DC555ADEE95C3DC37B69798CA17AC4B2B6F59EDD56  176564  img/A-demo-holed.png  (source=D:\ai-crew-data\t0711\evidence-final\A-demo-holed.png; source_bytes=176564; source_sha256=F1FD350FE59771560BFDE9DC555ADEE95C3DC37B69798CA17AC4B2B6F59EDD56; match=True)
+B10D091223512FD7CFBEE26A37B5A0C19024ECA7D31272EAA27771F39D7C3A10  174826  img/B-upload-holed.png  (source=D:\ai-crew-data\t0711\evidence-final\B-upload-holed.png; source_bytes=174826; source_sha256=B10D091223512FD7CFBEE26A37B5A0C19024ECA7D31272EAA27771F39D7C3A10; match=True)
