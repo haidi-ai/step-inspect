@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="data:,">
+<title>C01 法兰盘 · 20 条三态判定实录（自建样例）</title>
+<meta name="description" content="自建样例（非客户案例）：120×120×10 安装法兰：4×Ø10 沉孔位（本件为通孔）+ 中心 Ø30 通孔，检查能否下料/钻孔。 ZNKernel-II 2.28.4 跑 20 条规则，结果 不通过（reject 1）；报告含命令、判定与修正建议。">
+<meta name="robots" content="index,follow">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "TechArticle", "headline": "法兰盘：ZNKernel-II 20 条规则判定实录（C01）", "inLanguage": "zh-CN", "datePublished": "2026-11-24", "dateModified": "2026-11-24", "author": {"@type": "Organization", "name": "ZNGL 几何体检"}, "publisher": {"@type": "Organization", "name": "ZNGL 几何体检"}, "isPartOf": {"@type": "WebSite", "name": "ZNGL 几何体检", "url": "https://haidi-ai.github.io/step-inspect/"}, "about": "STEP 几何体的可制造性判定：20 条规则、allow/reject/cannot_judge 三态", "abstract": "自建样例（非客户案例）：120×120×10 安装法兰：4×Ø10 沉孔位（本件为通孔）+ 中心 Ø30 通孔，检查能否下料/钻孔。。", "license": "https://opensource.org/licenses/MIT", "keywords": ["STEP", "几何体检", "ZNKernel-II", "可制造性", "三态判定", "自建样例"], "mainEntityOfPage": {"@type": "WebPage", "@id": "https://haidi-ai.github.io/step-inspect/cases/C01-flange.html"}}</script>
+<style>
+:root{--ink:#0f172a;--muted:#475569;--line:#e2e8f0;--bg:#f8fafc;--card:#fff;--brand:#0f766e;
+--reject:#b91c1c;--reject-bg:#fee2e2;--cj:#6b7280;--cj-bg:#ececec;--ok:#0f766e;--ok-bg:#ccfbf1;--warn:#b45309}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"PingFang SC","Microsoft YaHei",system-ui,"Segoe UI",sans-serif;font-size:16px;line-height:1.7}
+a{color:var(--brand);text-decoration:none}a:hover{text-decoration:underline}
+.wrap{max-width:980px;margin:0 auto;padding:0 20px}
+.top{background:#fff;border-bottom:1px solid var(--line);position:sticky;top:0;z-index:9}
+.top .wrap{display:flex;align-items:center;gap:12px;min-height:56px;flex-wrap:wrap}
+.brand{font-weight:800}.brand small{font-weight:500;color:#64748b;font-size:.75rem;display:block}
+.selfbuilt{background:#fff4d6;border-bottom:1px solid #e3b24b;color:#6f4300;font-weight:800;font-size:.92rem;padding:9px 0;text-align:center;letter-spacing:.01em}
+.hero{padding:34px 0 10px}
+h1{font-size:clamp(1.5rem,4vw,2.2rem);margin:0 0 .3em;letter-spacing:-.01em}
+h2{font-size:1.15rem;margin:1.6em 0 .5em;padding-left:8px;border-left:4px solid var(--brand)}
+.muted{color:var(--muted)}.small{font-size:.86rem}
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px;margin:14px 0}
+.kpi{background:#fff;border:1px solid var(--line);border-radius:10px;padding:10px 12px}
+.kpi b{display:block;font-size:1.15rem}.kpi span{font-size:.78rem;color:#64748b}
+.card{background:#fff;border:1px solid var(--line);border-radius:12px;padding:16px}
+img.shot{width:100%;max-width:520px;border:1px solid var(--line);border-radius:10px;display:block;margin:0 auto;background:#fff}
+table{width:100%;border-collapse:collapse;font-size:.84rem;background:#fff}
+th,td{border:1px solid var(--line);padding:5px 7px;vertical-align:top;text-align:left}
+th{background:#f1f5f9;font-weight:700}
+.allow{color:var(--ok);font-weight:700}.reject{color:var(--reject);font-weight:700}.cj{color:var(--cj);font-weight:700}
+.tag{display:inline-block;border-radius:999px;padding:1px 9px;font-size:.78rem;font-weight:700}
+.t-reject{background:var(--reject-bg);color:var(--reject)}.t-cj{background:var(--cj-bg);color:var(--cj)}.t-ok{background:var(--ok-bg);color:var(--ok)}
+pre{background:#0b1220;color:#e2e8f0;border-radius:10px;padding:12px 14px;overflow:auto;font-size:.8rem;line-height:1.55}
+code{font-family:ui-monospace,Consolas,monospace}
+.note{background:#fff7ed;border:1px solid #fed7aa;border-radius:10px;padding:12px 14px;color:#7c2d12;font-size:.9rem}
+.foot{border-top:1px solid var(--line);margin-top:36px;padding:18px 0 40px;color:#64748b;font-size:.85rem}
+ul{padding-left:1.2em}
+</style></head>
+<body>
+<div class="selfbuilt">⚠ 自建样例 · 内部验证件（非客户案例）—— 本文不含客户名称，也不代表任何客户授权</div>
+<header class="top"><div class="wrap"><div class="brand">ZNGL 几何体检<small>STEP 打开先看清，再谈打印</small></div>
+<a href="../index.html" style="margin-left:auto">← 回主页</a><a href="index.html">全部案例</a></div></header>
+
+<div class="wrap">
+<div class="hero">
+<h1>C01 法兰盘：不通过（reject 1）</h1>
+<p class="muted">一句话需求：120×120×10 安装法兰：4×Ø10 沉孔位（本件为通孔）+ 中心 Ø30 通孔，检查能否下料/钻孔。</p>
+</div>
+
+<div class="kpis">
+<div class="kpi"><b>12</b><span>allow 允许</span></div>
+<div class="kpi"><b>1</b><span>reject 不通过</span></div>
+<div class="kpi"><b>7</b><span>cannot_judge 未判（≠通过）</span></div>
+<div class="kpi"><b>133789.8</b><span>体积 mm³（analytic）</span></div>
+<div class="kpi"><b>1.47s</b><span>重建耗时（内核）</span></div>
+</div>
+
+<h2>3D 外形</h2>
+<img class="shot" src="img/C01-flange.png" alt="法兰盘 3D 外形（STL 光栅渲染）">
+<p class="small muted">图为 STL 光栅渲染示意，不是 CAD 截图；判定针对的是 <code>input.step</code>（AP242）。</p>
+
+<h2>结论</h2>
+<div class="note"><b>不通过（reject 1）</b>。常规样例；reject / 未判项按修正建议处理后建议重跑对比。
+<br><span class="small">口径：<b>cannot_judge 不是 allow</b>——内核明确写 undecided（CLI policy 原文：undecided - NOT an allow; never treat as a pass）。</span></div>
+
+<h2>20 条判定（内核原样输出）</h2>
+<table><thead><tr><th style="width:38%">规则</th><th style="width:12%">判定</th><th>内核消息</th></tr></thead><tbody>
+<tr><td><code>manufacturing/min_wall_thickness</code></td><td class="allow">allow</td><td>minimum wall thickness satisfies the threshold</td></tr><tr><td><code>manufacturing/hole_penetration</code></td><td class="allow">allow</td><td>through holes open to free exterior / blind-hole remaining walls satisfy the provisional threshold</td></tr><tr><td><code>manufacturing/draft_angle</code></td><td class="cj">未判</td><td>draft angle of curved faces needs the general draft analysis (not judged)</td></tr><tr><td><code>manufacturing/sliver_face</code></td><td class="cj">未判</td><td>sliver ratio of curved faces needs face-area integration (not judged)</td></tr><tr><td><code>quality/non_manifold</code></td><td class="allow">allow</td><td>topology validates and is manifold</td></tr><tr><td><code>assembly/interference</code></td><td class="cj">未判</td><td>assembly interference needs two non-empty bodies</td></tr><tr><td><code>manufacturing/blade_thin_section</code></td><td class="allow">allow</td><td>curved thin section satisfies the minimum thickness</td></tr><tr><td><code>manufacturing/hole_depth_ratio</code></td><td class="allow">allow</td><td>hole depth-to-diameter ratios are within the threshold</td></tr><tr><td><code>manufacturing/sharp_internal_corner</code></td><td class="cj">未判</td><td>no measurable concave planar edge (curved geometry)</td></tr><tr><td><code>quality/small_feature</code></td><td class="allow">allow</td><td>smallest feature (B-rep edge) satisfies the minimum feature size</td></tr><tr><td><code>manufacturing/undercut</code></td><td class="allow">allow</td><td>no undercut patch was found for the given pull direction</td></tr><tr><td><code>manufacturing/min_hole_diameter</code></td><td class="allow">allow</td><td>all cylindrical hole diameters satisfy the threshold</td></tr><tr><td><code>manufacturing/wall_thickness_uniformity</code></td><td class="cj">未判</td><td>no thin-wall sample lies below maxWallThickness</td></tr><tr><td><code>quality/stress_concentration_corner</code></td><td class="cj">未判</td><td>no measurable concave planar edge (curved geometry)</td></tr><tr><td><code>manufacturing/missing_fillet</code></td><td class="cj">未判</td><td>edge transition or measurement lies inside the decision band</td></tr><tr><td><code>manufacturing/bridge_span</code></td><td class="allow">allow</td><td>all ceiling spans are within the span/thickness limit</td></tr><tr><td><code>manufacturing/overhang_angle</code></td><td class="allow">allow</td><td>no unsupported downward face above the build-plate skin</td></tr><tr><td><code>manufacturing/step_height_ratio</code></td><td class="allow">allow</td><td>step/riser heights are within the step-height ratio</td></tr><tr><td><code>manufacturing/residual_wall</code></td><td class="allow">allow</td><td>residual wall around all holes satisfies the minimum</td></tr><tr><td><code>quality/opening_radius</code></td><td class="reject">reject</td><td>a hole opening has no rounded/chamfered transition of the required size</td></tr>
+</tbody></table>
+
+<h2>复现命令</h2>
+<pre><code>$env:ZNK2_LICENSE_FILE = '...\znk2-internal.lic'
+znk2_cli.exe adjudicate --file input.step
+# 工件 SHA256 9C4027E1FC48F046127B85D0E8738DE7…（完整值见 verdict.json 的 artifact_sha256）</code></pre>
+<p class="small muted">配方（每步 stdin JSON）与完整判定证据在仓库 <code>cases/c01/</code>；本页数字与仓库产物同一次运行产出。</p>
+
+<div class="foot">
+<b>自建样例声明</b>：本页为我方自建、内部验证用的样例件，<b>不是客户案例</b>，不含任何客户名称或客户授权暗示；结论以内核输出为准，必要时标注未验证。<br>
+ZNKernel-II 2.28.4 · 规则集 20 条三态 · 生成于 2026-11-24 · <a href="index.html">全部案例</a>
+</div>
+</div></body></html>

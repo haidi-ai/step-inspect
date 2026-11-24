@@ -1,0 +1,626 @@
+{
+ "case_id": "C01",
+ "name": "法兰盘",
+ "label": "自建/内部验证件 · 非客户案例",
+ "kernel_version": "2.28.4",
+ "license_env": "ZNK2_LICENSE_FILE",
+ "cli_md5": "F916DBEF20AFDE2B",
+ "requirement": "120×120×10 安装法兰：4×Ø10 沉孔位（本件为通孔）+ 中心 Ø30 通孔，检查能否下料/钻孔。",
+ "recipe": {
+  "kind": "boolean",
+  "op": "subtract",
+  "a": {
+   "kind": "boolean",
+   "op": "subtract",
+   "a": {
+    "kind": "boolean",
+    "op": "subtract",
+    "a": {
+     "kind": "boolean",
+     "op": "subtract",
+     "a": {
+      "kind": "boolean",
+      "op": "subtract",
+      "a": {
+       "kind": "primitive",
+       "primitive": "box",
+       "params": {
+        "lo": [
+         -60,
+         -60,
+         0
+        ],
+        "hi": [
+         60,
+         60,
+         10
+        ]
+       }
+      },
+      "b": {
+       "kind": "primitive",
+       "primitive": "cylinder",
+       "params": {
+        "center": [
+         -40,
+         -40,
+         -5
+        ],
+        "radius": 5,
+        "height": 20,
+        "axis": [
+         0,
+         0,
+         1
+        ]
+       }
+      }
+     },
+     "b": {
+      "kind": "primitive",
+      "primitive": "cylinder",
+      "params": {
+       "center": [
+        40,
+        -40,
+        -5
+       ],
+       "radius": 5,
+       "height": 20,
+       "axis": [
+        0,
+        0,
+        1
+       ]
+      }
+     }
+    },
+    "b": {
+     "kind": "primitive",
+     "primitive": "cylinder",
+     "params": {
+      "center": [
+       -40,
+       40,
+       -5
+      ],
+      "radius": 5,
+      "height": 20,
+      "axis": [
+       0,
+       0,
+       1
+      ]
+     }
+    }
+   },
+   "b": {
+    "kind": "primitive",
+    "primitive": "cylinder",
+    "params": {
+     "center": [
+      40,
+      40,
+      -5
+     ],
+     "radius": 5,
+     "height": 20,
+     "axis": [
+      0,
+      0,
+      1
+     ]
+    }
+   }
+  },
+  "b": {
+   "kind": "primitive",
+   "primitive": "cylinder",
+   "params": {
+    "center": [
+     0,
+     0,
+     -5
+    ],
+    "radius": 15,
+    "height": 20,
+    "axis": [
+     0,
+     0,
+     1
+    ]
+   }
+  }
+ },
+ "reproduce": [
+  {
+   "cmd": "znk2_cli.exe --json -",
+   "stdin": {
+    "op": "create",
+    "primitive": "box",
+    "params": {
+     "lo": [
+      -60,
+      -60,
+      0
+     ],
+     "hi": [
+      60,
+      60,
+      10
+     ]
+    }
+   }
+  },
+  {
+   "cmd": "znk2_cli.exe --json -",
+   "stdin": {
+    "op": "boolean",
+    "operation": "subtract",
+    "a": {
+     "kind": "primitive",
+     "primitive": "box",
+     "params": {
+      "lo": [
+       -60,
+       -60,
+       0
+      ],
+      "hi": [
+       60,
+       60,
+       10
+      ]
+     }
+    },
+    "b": {
+     "kind": "primitive",
+     "primitive": "cylinder",
+     "params": {
+      "center": [
+       -40,
+       -40,
+       -5
+      ],
+      "radius": 5,
+      "height": 20,
+      "axis": [
+       0,
+       0,
+       1
+      ]
+     }
+    }
+   }
+  },
+  {
+   "cmd": "znk2_cli.exe --json -",
+   "stdin": {
+    "op": "boolean",
+    "operation": "subtract",
+    "a": {
+     "kind": "boolean",
+     "op": "subtract",
+     "a": {
+      "kind": "primitive",
+      "primitive": "box",
+      "params": {
+       "lo": [
+        -60,
+        -60,
+        0
+       ],
+       "hi": [
+        60,
+        60,
+        10
+       ]
+      }
+     },
+     "b": {
+      "kind": "primitive",
+      "primitive": "cylinder",
+      "params": {
+       "center": [
+        -40,
+        -40,
+        -5
+       ],
+       "radius": 5,
+       "height": 20,
+       "axis": [
+        0,
+        0,
+        1
+       ]
+      }
+     }
+    },
+    "b": {
+     "kind": "primitive",
+     "primitive": "cylinder",
+     "params": {
+      "center": [
+       40,
+       -40,
+       -5
+      ],
+      "radius": 5,
+      "height": 20,
+      "axis": [
+       0,
+       0,
+       1
+      ]
+     }
+    }
+   }
+  },
+  {
+   "cmd": "znk2_cli.exe --json -",
+   "stdin": {
+    "op": "boolean",
+    "operation": "subtract",
+    "a": {
+     "kind": "boolean",
+     "op": "subtract",
+     "a": {
+      "kind": "boolean",
+      "op": "subtract",
+      "a": {
+       "kind": "primitive",
+       "primitive": "box",
+       "params": {
+        "lo": [
+         -60,
+         -60,
+         0
+        ],
+        "hi": [
+         60,
+         60,
+         10
+        ]
+       }
+      },
+      "b": {
+       "kind": "primitive",
+       "primitive": "cylinder",
+       "params": {
+        "center": [
+         -40,
+         -40,
+         -5
+        ],
+        "radius": 5,
+        "height": 20,
+        "axis": [
+         0,
+         0,
+         1
+        ]
+       }
+      }
+     },
+     "b": {
+      "kind": "primitive",
+      "primitive": "cylinder",
+      "params": {
+       "center": [
+        40,
+        -40,
+        -5
+       ],
+       "radius": 5,
+       "height": 20,
+       "axis": [
+        0,
+        0,
+        1
+       ]
+      }
+     }
+    },
+    "b": {
+     "kind": "primitive",
+     "primitive": "cylinder",
+     "params": {
+      "center": [
+       -40,
+       40,
+       -5
+      ],
+      "radius": 5,
+      "height": 20,
+      "axis": [
+       0,
+       0,
+       1
+      ]
+     }
+    }
+   }
+  },
+  {
+   "cmd": "znk2_cli.exe --json -",
+   "stdin": {
+    "op": "boolean",
+    "operation": "subtract",
+    "a": {
+     "kind": "boolean",
+     "op": "subtract",
+     "a": {
+      "kind": "boolean",
+      "op": "subtract",
+      "a": {
+       "kind": "boolean",
+       "op": "subtract",
+       "a": {
+        "kind": "primitive",
+        "primitive": "box",
+        "params": {
+         "lo": [
+          -60,
+          -60,
+          0
+         ],
+         "hi": [
+          60,
+          60,
+          10
+         ]
+        }
+       },
+       "b": {
+        "kind": "primitive",
+        "primitive": "cylinder",
+        "params": {
+         "center": [
+          -40,
+          -40,
+          -5
+         ],
+         "radius": 5,
+         "height": 20,
+         "axis": [
+          0,
+          0,
+          1
+         ]
+        }
+       }
+      },
+      "b": {
+       "kind": "primitive",
+       "primitive": "cylinder",
+       "params": {
+        "center": [
+         40,
+         -40,
+         -5
+        ],
+        "radius": 5,
+        "height": 20,
+        "axis": [
+         0,
+         0,
+         1
+        ]
+       }
+      }
+     },
+     "b": {
+      "kind": "primitive",
+      "primitive": "cylinder",
+      "params": {
+       "center": [
+        -40,
+        40,
+        -5
+       ],
+       "radius": 5,
+       "height": 20,
+       "axis": [
+        0,
+        0,
+        1
+       ]
+      }
+     }
+    },
+    "b": {
+     "kind": "primitive",
+     "primitive": "cylinder",
+     "params": {
+      "center": [
+       40,
+       40,
+       -5
+      ],
+      "radius": 5,
+      "height": 20,
+      "axis": [
+       0,
+       0,
+       1
+      ]
+     }
+    }
+   }
+  },
+  {
+   "cmd": "znk2_cli.exe --json -",
+   "stdin": {
+    "op": "boolean",
+    "operation": "subtract",
+    "a": {
+     "kind": "boolean",
+     "op": "subtract",
+     "a": {
+      "kind": "boolean",
+      "op": "subtract",
+      "a": {
+       "kind": "boolean",
+       "op": "subtract",
+       "a": {
+        "kind": "boolean",
+        "op": "subtract",
+        "a": {
+         "kind": "primitive",
+         "primitive": "box",
+         "params": {
+          "lo": [
+           -60,
+           -60,
+           0
+          ],
+          "hi": [
+           60,
+           60,
+           10
+          ]
+         }
+        },
+        "b": {
+         "kind": "primitive",
+         "primitive": "cylinder",
+         "params": {
+          "center": [
+           -40,
+           -40,
+           -5
+          ],
+          "radius": 5,
+          "height": 20,
+          "axis": [
+           0,
+           0,
+           1
+          ]
+         }
+        }
+       },
+       "b": {
+        "kind": "primitive",
+        "primitive": "cylinder",
+        "params": {
+         "center": [
+          40,
+          -40,
+          -5
+         ],
+         "radius": 5,
+         "height": 20,
+         "axis": [
+          0,
+          0,
+          1
+         ]
+        }
+       }
+      },
+      "b": {
+       "kind": "primitive",
+       "primitive": "cylinder",
+       "params": {
+        "center": [
+         -40,
+         40,
+         -5
+        ],
+        "radius": 5,
+        "height": 20,
+        "axis": [
+         0,
+         0,
+         1
+        ]
+       }
+      }
+     },
+     "b": {
+      "kind": "primitive",
+      "primitive": "cylinder",
+      "params": {
+       "center": [
+        40,
+        40,
+        -5
+       ],
+       "radius": 5,
+       "height": 20,
+       "axis": [
+        0,
+        0,
+        1
+       ]
+      }
+     }
+    },
+    "b": {
+     "kind": "primitive",
+     "primitive": "cylinder",
+     "params": {
+      "center": [
+       0,
+       0,
+       -5
+      ],
+      "radius": 15,
+      "height": 20,
+      "axis": [
+       0,
+       0,
+       1
+      ]
+     }
+    }
+   }
+  }
+ ],
+ "reproduce_adjudicate": {
+  "cmd": "znk2_cli.exe adjudicate --file E:\\ai-crew-assets\\cases\\C01-flange\\input.step"
+ },
+ "measured": {
+  "volume_mm3": 133789.82395927634,
+  "volume_source": "analytic",
+  "area_mm2": 33757.07968274474,
+  "bbox": {
+   "min": [
+    -60.0000001,
+    -60.0000001,
+    -2e-07
+   ],
+   "max": [
+    60.0000001,
+    60.0000001,
+    10.000000199999999
+   ]
+  },
+  "topology": {
+   "vertices": 28,
+   "edges": 47,
+   "coedges": 94,
+   "loops": 11,
+   "faces": 11,
+   "shells": 1,
+   "solids": 1,
+   "euler_characteristic": -8,
+   "euler_characteristic_topological": -8,
+   "valid": true,
+   "issue_count": 0,
+   "shell_euler": [
+    -8
+   ],
+   "shell_euler_topological": [
+    -8
+   ]
+  },
+  "tessellation": null,
+  "rebuild_ms": 1467.5,
+  "rebuild_volume_mm3": 133789.82395927634,
+  "rebuild_volume_match": true,
+  "rebuild_source": "analytic"
+ },
+ "notes": "板厚 10 mm，孔全部为通孔，几何全部走解析布尔（volume_source=analytic）。"
+}

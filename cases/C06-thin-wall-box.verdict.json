@@ -1,0 +1,319 @@
+{
+ "case_id": "C06",
+ "name": "薄壁盒",
+ "label": "自建/内部验证件 · 非客户案例",
+ "kernel_version": "2.28.4",
+ "cli": "E:\\ai-crew-assets\\ZNKernel-II\\dist-2.28.4\\znk2_cli.exe",
+ "artifact": "input.step",
+ "artifact_sha256": "70C7132A63FC19FBF3C46439AF6ECE96285BD0828582763B8B0F71FD75450A54",
+ "judged_at": "2026-11-24T13:50:09+08:00",
+ "rule_count": 20,
+ "verdict_summary": {
+  "allow": 4,
+  "reject": 7,
+  "cannot_judge": 9
+ },
+ "policy": {
+  "cannot_judge": "undecided - NOT an allow; never treat as a pass"
+ },
+ "results": [
+  {
+   "id": "manufacturing/min_wall_thickness",
+   "name": "min_wall_thickness",
+   "rule_version": "1.0",
+   "verdict": "reject",
+   "message": "minimum wall thickness is below the required threshold",
+   "evidence": {
+    "threshold": 1,
+    "samples": 120,
+    "uncertainty": 7.0710678458066e-05,
+    "face": 59,
+    "x": 49.20000000000001,
+    "y": 26.400000000000002,
+    "z": 10.266666666666667,
+    "misses": 0,
+    "minThickness": 0.7999999999999926
+   }
+  },
+  {
+   "id": "manufacturing/hole_penetration",
+   "name": "hole_penetration",
+   "rule_version": "1.0",
+   "verdict": "cannot_judge",
+   "message": "no cylindrical hole wall was identified",
+   "evidence": {
+    "margin": 0.5,
+    "remainingWallThreshold": 0.5,
+    "thresholdProvisional": 1
+   }
+  },
+  {
+   "id": "manufacturing/draft_angle",
+   "name": "draft_angle",
+   "rule_version": "1.0",
+   "verdict": "reject",
+   "message": "minimum draft angle is below the required threshold",
+   "evidence": {
+    "thresholdDeg": 1,
+    "judgedFaces": 40,
+    "minDraftDeg": 0,
+    "face": 18
+   }
+  },
+  {
+   "id": "manufacturing/sliver_face",
+   "name": "sliver_face",
+   "rule_version": "1.0",
+   "verdict": "allow",
+   "message": "all faces satisfy the required area/perimeter ratio",
+   "evidence": {
+    "threshold": 0.02,
+    "face": 28,
+    "minRatio": 0.1999999999999979,
+    "area": 0.6399999999999935,
+    "perimeter": 3.200000000000001
+   }
+  },
+  {
+   "id": "quality/non_manifold",
+   "name": "non_manifold",
+   "rule_version": "1.0",
+   "verdict": "allow",
+   "message": "topology validates and is manifold",
+   "evidence": {
+    "issueCount": 0,
+    "faces": 60,
+    "edges": 120,
+    "shells": 2
+   }
+  },
+  {
+   "id": "assembly/interference",
+   "name": "interference",
+   "rule_version": "1.0",
+   "verdict": "cannot_judge",
+   "message": "assembly interference needs two non-empty bodies",
+   "evidence": {
+    "threshold": 0,
+    "band": 0.02
+   }
+  },
+  {
+   "id": "manufacturing/blade_thin_section",
+   "name": "blade_thin_section",
+   "rule_version": "1.1",
+   "verdict": "cannot_judge",
+   "message": "no curved thin-section surface could be measured",
+   "evidence": {
+    "threshold": 1,
+    "band": 0.02,
+    "samples": 0,
+    "misses": 0
+   }
+  },
+  {
+   "id": "manufacturing/hole_depth_ratio",
+   "name": "hole_depth_ratio",
+   "rule_version": "1.1",
+   "verdict": "cannot_judge",
+   "message": "no cylindrical hole wall was identified",
+   "evidence": {
+    "threshold": 5,
+    "band": 0.02
+   }
+  },
+  {
+   "id": "manufacturing/sharp_internal_corner",
+   "name": "sharp_internal_corner",
+   "rule_version": "1.1",
+   "verdict": "allow",
+   "message": "all internal corners are wider than the sharp-corner threshold",
+   "evidence": {
+    "thresholdDeg": 60,
+    "bandDeg": 2,
+    "edgesMeasured": 12,
+    "minNotchDeg": 90,
+    "edge": 108,
+    "x": 49.2,
+    "y": 20,
+    "z": 0.8
+   }
+  },
+  {
+   "id": "quality/small_feature",
+   "name": "small_feature",
+   "rule_version": "1.1",
+   "verdict": "reject",
+   "message": "smallest feature (B-rep edge) is below the minimum feature size",
+   "evidence": {
+    "threshold": 1,
+    "band": 0.02,
+    "edges": 120,
+    "minEdgeLength": 0.7999999999999972,
+    "edge": 10,
+    "x": 0,
+    "y": 39.6,
+    "z": 0
+   }
+  },
+  {
+   "id": "manufacturing/undercut",
+   "name": "undercut",
+   "rule_version": "1.2",
+   "verdict": "reject",
+   "message": "surface patches are blocked along both pull directions (undercut)",
+   "evidence": {
+    "threshold": 0,
+    "band": 0.01,
+    "pullDirectionX": 0,
+    "pullDirectionY": 0,
+    "pullDirectionZ": 1,
+    "samples": 120,
+    "undercutSamples": 12,
+    "undercutArea": 8647.359999999999,
+    "sampledArea": 18047.359999999997,
+    "undercutRatio": 0.47914819674456544
+   }
+  },
+  {
+   "id": "manufacturing/min_hole_diameter",
+   "name": "min_hole_diameter",
+   "rule_version": "1.2",
+   "verdict": "cannot_judge",
+   "message": "no cylindrical hole wall was identified",
+   "evidence": {
+    "threshold": 1,
+    "band": 0.02,
+    "holeCount": 0
+   }
+  },
+  {
+   "id": "manufacturing/wall_thickness_uniformity",
+   "name": "wall_thickness_uniformity",
+   "rule_version": "1.2",
+   "verdict": "allow",
+   "message": "wall thickness is uniform within the threshold",
+   "evidence": {
+    "threshold": 0.25,
+    "band": 0.02,
+    "maxWallThickness": 5,
+    "samples": 120,
+    "minThickness": 0.7999999999999926,
+    "familySamples": 8,
+    "minFamilyThickness": 0.7999999999999926,
+    "maxFamilyThickness": 0.8000000000000068,
+    "variation": 1.7763568394002353e-14
+   }
+  },
+  {
+   "id": "quality/stress_concentration_corner",
+   "name": "stress_concentration_corner",
+   "rule_version": "1.2",
+   "verdict": "cannot_judge",
+   "message": "internal corner stress proxy or measurement lies inside the decision band",
+   "evidence": {
+    "threshold": 3,
+    "band": 0.02,
+    "concaveEdges": 12,
+    "uncertainEdges": 72,
+    "maxStressFactor": 1.4142135623730951,
+    "minNotchDeg": 90,
+    "edge": 108,
+    "x": 49.2,
+    "y": 20,
+    "z": 0.8
+   }
+  },
+  {
+   "id": "manufacturing/missing_fillet",
+   "name": "missing_fillet",
+   "rule_version": "1.2",
+   "verdict": "cannot_judge",
+   "message": "edge transition or measurement lies inside the decision band",
+   "evidence": {
+    "thresholdDeg": 45,
+    "bandDeg": 2,
+    "edgesMeasured": 36,
+    "uncertainEdges": 72,
+    "minEdgeAngleDeg": 90,
+    "edge": 0,
+    "x": 0,
+    "y": 0.4,
+    "z": 0
+   }
+  },
+  {
+   "id": "manufacturing/bridge_span",
+   "name": "bridge_span",
+   "rule_version": "1.2",
+   "verdict": "reject",
+   "message": "an unsupported ceiling span exceeds the span/thickness limit",
+   "evidence": {
+    "threshold": 20,
+    "band": 0.02,
+    "facesMeasured": 10,
+    "uncertainFaces": 0,
+    "maxSpanRatio": 60.50000000000001,
+    "span": 48.400000000000006,
+    "thickness": 0.8,
+    "face": 8
+   }
+  },
+  {
+   "id": "manufacturing/overhang_angle",
+   "name": "overhang_angle",
+   "rule_version": "1.2",
+   "verdict": "reject",
+   "message": "a downward face exceeds the maximum overhang angle (support needed)",
+   "evidence": {
+    "thresholdDeg": 45,
+    "bandDeg": 2,
+    "samples": 2,
+    "maxOverhangDeg": 90,
+    "x": 16.933333333333334,
+    "y": 26.400000000000002,
+    "z": 29.2
+   }
+  },
+  {
+   "id": "manufacturing/step_height_ratio",
+   "name": "step_height_ratio",
+   "rule_version": "1.2",
+   "verdict": "reject",
+   "message": "a step/riser height exceeds the step-height ratio",
+   "evidence": {
+    "threshold": 2.5,
+    "band": 0.02,
+    "verticalFaces": 40,
+    "samples": 120,
+    "maxStepHeight": 28.400000000000006,
+    "minThickness": 0.7999999999999926,
+    "stepHeightRatio": 35.500000000000334
+   }
+  },
+  {
+   "id": "manufacturing/residual_wall",
+   "name": "residual_wall",
+   "rule_version": "1.2",
+   "verdict": "cannot_judge",
+   "message": "no cylindrical hole wall was identified",
+   "evidence": {
+    "threshold": 1,
+    "band": 0.02,
+    "holeCount": 0
+   }
+  },
+  {
+   "id": "quality/opening_radius",
+   "name": "opening_radius",
+   "rule_version": "1.2",
+   "verdict": "cannot_judge",
+   "message": "no cylindrical hole wall was identified",
+   "evidence": {
+    "threshold": 0.2,
+    "band": 0.02,
+    "holeCount": 0
+   }
+  }
+ ]
+}

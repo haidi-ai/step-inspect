@@ -1,0 +1,152 @@
+{
+ "case_id": "C06",
+ "name": "薄壁盒",
+ "label": "自建/内部验证件 · 非客户案例",
+ "kernel_version": "2.28.4",
+ "license_env": "ZNK2_LICENSE_FILE",
+ "cli_md5": "F916DBEF20AFDE2B",
+ "requirement": "50×40×30 封闭薄壁盒，壁厚 0.8 mm，检查能否注塑/机加。",
+ "recipe": {
+  "kind": "boolean",
+  "op": "subtract",
+  "a": {
+   "kind": "primitive",
+   "primitive": "box",
+   "params": {
+    "lo": [
+     0,
+     0,
+     0
+    ],
+    "hi": [
+     50,
+     40,
+     30
+    ]
+   }
+  },
+  "b": {
+   "kind": "primitive",
+   "primitive": "box",
+   "params": {
+    "lo": [
+     0.8,
+     0.8,
+     0.8
+    ],
+    "hi": [
+     49.2,
+     39.2,
+     29.2
+    ]
+   }
+  }
+ },
+ "reproduce": [
+  {
+   "cmd": "znk2_cli.exe --json -",
+   "stdin": {
+    "op": "create",
+    "primitive": "box",
+    "params": {
+     "lo": [
+      0,
+      0,
+      0
+     ],
+     "hi": [
+      50,
+      40,
+      30
+     ]
+    }
+   }
+  },
+  {
+   "cmd": "znk2_cli.exe --json -",
+   "stdin": {
+    "op": "boolean",
+    "operation": "subtract",
+    "a": {
+     "kind": "primitive",
+     "primitive": "box",
+     "params": {
+      "lo": [
+       0,
+       0,
+       0
+      ],
+      "hi": [
+       50,
+       40,
+       30
+      ]
+     }
+    },
+    "b": {
+     "kind": "primitive",
+     "primitive": "box",
+     "params": {
+      "lo": [
+       0.8,
+       0.8,
+       0.8
+      ],
+      "hi": [
+       49.2,
+       39.2,
+       29.2
+      ]
+     }
+    }
+   }
+  }
+ ],
+ "reproduce_adjudicate": {
+  "cmd": "znk2_cli.exe adjudicate --file E:\\ai-crew-assets\\cases\\C06-thin-wall-box\\input.step"
+ },
+ "measured": {
+  "volume_mm3": 7216.895999999942,
+  "volume_source": "analytic",
+  "area_mm2": 18047.359999999997,
+  "bbox": {
+   "min": [
+    -1e-07,
+    -1e-07,
+    -1e-07
+   ],
+   "max": [
+    50.0000001,
+    40.0000001,
+    30.0000001
+   ]
+  },
+  "topology": {
+   "vertices": 64,
+   "edges": 120,
+   "coedges": 240,
+   "loops": 60,
+   "faces": 60,
+   "shells": 2,
+   "solids": 1,
+   "euler_characteristic": 4,
+   "euler_characteristic_topological": 4,
+   "valid": true,
+   "issue_count": 0,
+   "shell_euler": [
+    2,
+    2
+   ],
+   "shell_euler_topological": [
+    2,
+    2
+   ]
+  },
+  "tessellation": null,
+  "rebuild_ms": 20.6,
+  "rebuild_volume_mm3": 7216.895999999942,
+  "rebuild_volume_match": true,
+  "rebuild_source": "analytic"
+ },
+ "notes": "封闭内腔（双壳，chi=4），壁厚 0.8 mm 低于 1.0 阈值，属设计缺陷示例。"
+}

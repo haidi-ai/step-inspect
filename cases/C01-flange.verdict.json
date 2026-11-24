@@ -1,0 +1,326 @@
+{
+ "case_id": "C01",
+ "name": "法兰盘",
+ "label": "自建/内部验证件 · 非客户案例",
+ "kernel_version": "2.28.4",
+ "cli": "E:\\ai-crew-assets\\ZNKernel-II\\dist-2.28.4\\znk2_cli.exe",
+ "artifact": "input.step",
+ "artifact_sha256": "9C4027E1FC48F046127B85D0E8738DE75E3F4262476374BAB496C291B1B2352B",
+ "judged_at": "2026-11-24T13:49:37+08:00",
+ "rule_count": 20,
+ "verdict_summary": {
+  "allow": 12,
+  "reject": 1,
+  "cannot_judge": 7
+ },
+ "policy": {
+  "cannot_judge": "undecided - NOT an allow; never treat as a pass"
+ },
+ "results": [
+  {
+   "id": "manufacturing/min_wall_thickness",
+   "name": "min_wall_thickness",
+   "rule_version": "1.0",
+   "verdict": "allow",
+   "message": "minimum wall thickness satisfies the threshold",
+   "evidence": {
+    "threshold": 1,
+    "samples": 1312,
+    "uncertainty": 0.00017000000030588237,
+    "face": 5,
+    "x": -49.99197454445366,
+    "y": 46.83002856721594,
+    "z": 0,
+    "misses": 0,
+    "minThickness": 9.99999999999992
+   }
+  },
+  {
+   "id": "manufacturing/hole_penetration",
+   "name": "hole_penetration",
+   "rule_version": "1.0",
+   "verdict": "allow",
+   "message": "through holes open to free exterior / blind-hole remaining walls satisfy the provisional threshold",
+   "evidence": {
+    "margin": 0.5,
+    "remainingWallThreshold": 0.5,
+    "thresholdProvisional": 1,
+    "chordTol": 0.17000000030588236,
+    "holeId": 4,
+    "radius": 15.000000000000002,
+    "remainingWall": 0,
+    "throughHole": 1,
+    "openingRays": 52,
+    "escapeRaysLo": 26,
+    "escapeRaysHi": 26,
+    "holeCount": 5,
+    "rejectedCount": 0
+   }
+  },
+  {
+   "id": "manufacturing/draft_angle",
+   "name": "draft_angle",
+   "rule_version": "1.0",
+   "verdict": "cannot_judge",
+   "message": "draft angle of curved faces needs the general draft analysis (not judged)",
+   "evidence": {
+    "thresholdDeg": 1
+   }
+  },
+  {
+   "id": "manufacturing/sliver_face",
+   "name": "sliver_face",
+   "rule_version": "1.0",
+   "verdict": "cannot_judge",
+   "message": "sliver ratio of curved faces needs face-area integration (not judged)",
+   "evidence": {
+    "threshold": 0.02
+   }
+  },
+  {
+   "id": "quality/non_manifold",
+   "name": "non_manifold",
+   "rule_version": "1.0",
+   "verdict": "allow",
+   "message": "topology validates and is manifold",
+   "evidence": {
+    "issueCount": 0,
+    "faces": 11,
+    "edges": 47,
+    "shells": 1
+   }
+  },
+  {
+   "id": "assembly/interference",
+   "name": "interference",
+   "rule_version": "1.0",
+   "verdict": "cannot_judge",
+   "message": "assembly interference needs two non-empty bodies",
+   "evidence": {
+    "threshold": 0,
+    "band": 0.02
+   }
+  },
+  {
+   "id": "manufacturing/blade_thin_section",
+   "name": "blade_thin_section",
+   "rule_version": "1.1",
+   "verdict": "allow",
+   "message": "curved thin section satisfies the minimum thickness",
+   "evidence": {
+    "threshold": 1,
+    "band": 0.02,
+    "samples": 640,
+    "misses": 0,
+    "minThickness": 15.026125081273292,
+    "face": 6,
+    "x": -44.99197454445366,
+    "y": -39.83663809945073,
+    "z": 3.3333333333333335
+   }
+  },
+  {
+   "id": "manufacturing/hole_depth_ratio",
+   "name": "hole_depth_ratio",
+   "rule_version": "1.1",
+   "verdict": "allow",
+   "message": "hole depth-to-diameter ratios are within the threshold",
+   "evidence": {
+    "threshold": 5,
+    "band": 0.02,
+    "holeCount": 5,
+    "throughCount": 5,
+    "uncertainCount": 0,
+    "holeId": 0,
+    "depth": 10,
+    "diameter": 10,
+    "maxDepthRatio": 1
+   }
+  },
+  {
+   "id": "manufacturing/sharp_internal_corner",
+   "name": "sharp_internal_corner",
+   "rule_version": "1.1",
+   "verdict": "cannot_judge",
+   "message": "no measurable concave planar edge (curved geometry)",
+   "evidence": {
+    "thresholdDeg": 60,
+    "bandDeg": 2,
+    "edgesMeasured": 0
+   }
+  },
+  {
+   "id": "quality/small_feature",
+   "name": "small_feature",
+   "rule_version": "1.1",
+   "verdict": "allow",
+   "message": "smallest feature (B-rep edge) satisfies the minimum feature size",
+   "evidence": {
+    "threshold": 1,
+    "band": 0.02,
+    "edges": 47,
+    "minEdgeLength": 10,
+    "edge": 1,
+    "x": 60.00000000000001,
+    "y": -60.00000000000001,
+    "z": 5
+   }
+  },
+  {
+   "id": "manufacturing/undercut",
+   "name": "undercut",
+   "rule_version": "1.2",
+   "verdict": "allow",
+   "message": "no undercut patch was found for the given pull direction",
+   "evidence": {
+    "threshold": 0,
+    "band": 0.01,
+    "pullDirectionX": 0,
+    "pullDirectionY": 0,
+    "pullDirectionZ": 1,
+    "samples": 1312,
+    "undercutSamples": 0,
+    "undercutArea": 0,
+    "sampledArea": 33759.47529101445,
+    "undercutRatio": 0
+   }
+  },
+  {
+   "id": "manufacturing/min_hole_diameter",
+   "name": "min_hole_diameter",
+   "rule_version": "1.2",
+   "verdict": "allow",
+   "message": "all cylindrical hole diameters satisfy the threshold",
+   "evidence": {
+    "threshold": 1,
+    "band": 0.02,
+    "holeCount": 5,
+    "uncertainCount": 0,
+    "holeId": 0,
+    "minDiameter": 10
+   }
+  },
+  {
+   "id": "manufacturing/wall_thickness_uniformity",
+   "name": "wall_thickness_uniformity",
+   "rule_version": "1.2",
+   "verdict": "cannot_judge",
+   "message": "no thin-wall sample lies below maxWallThickness",
+   "evidence": {
+    "threshold": 0.25,
+    "band": 0.02,
+    "maxWallThickness": 5,
+    "samples": 1312,
+    "minThickness": 9.99999999999992
+   }
+  },
+  {
+   "id": "quality/stress_concentration_corner",
+   "name": "stress_concentration_corner",
+   "rule_version": "1.2",
+   "verdict": "cannot_judge",
+   "message": "no measurable concave planar edge (curved geometry)",
+   "evidence": {
+    "threshold": 3,
+    "band": 0.02,
+    "concaveEdges": 0,
+    "uncertainEdges": 35
+   }
+  },
+  {
+   "id": "manufacturing/missing_fillet",
+   "name": "missing_fillet",
+   "rule_version": "1.2",
+   "verdict": "cannot_judge",
+   "message": "edge transition or measurement lies inside the decision band",
+   "evidence": {
+    "thresholdDeg": 45,
+    "bandDeg": 2,
+    "edgesMeasured": 12,
+    "uncertainEdges": 35,
+    "minEdgeAngleDeg": 90,
+    "edge": 0,
+    "x": 0,
+    "y": -60.00000000000001,
+    "z": 0
+   }
+  },
+  {
+   "id": "manufacturing/bridge_span",
+   "name": "bridge_span",
+   "rule_version": "1.2",
+   "verdict": "allow",
+   "message": "all ceiling spans are within the span/thickness limit",
+   "evidence": {
+    "threshold": 20,
+    "band": 0.02,
+    "facesMeasured": 1,
+    "uncertainFaces": 0,
+    "maxSpanRatio": 12.000000000000098,
+    "span": 120.00000000000001,
+    "thickness": 9.99999999999992,
+    "face": 5
+   }
+  },
+  {
+   "id": "manufacturing/overhang_angle",
+   "name": "overhang_angle",
+   "rule_version": "1.2",
+   "verdict": "allow",
+   "message": "no unsupported downward face above the build-plate skin",
+   "evidence": {
+    "thresholdDeg": 45,
+    "bandDeg": 2,
+    "samples": 0
+   }
+  },
+  {
+   "id": "manufacturing/step_height_ratio",
+   "name": "step_height_ratio",
+   "rule_version": "1.2",
+   "verdict": "allow",
+   "message": "step/riser heights are within the step-height ratio",
+   "evidence": {
+    "threshold": 2.5,
+    "band": 0.02,
+    "verticalFaces": 4,
+    "samples": 1312,
+    "maxStepHeight": 10,
+    "minThickness": 9.99999999999992,
+    "stepHeightRatio": 1.000000000000008
+   }
+  },
+  {
+   "id": "manufacturing/residual_wall",
+   "name": "residual_wall",
+   "rule_version": "1.2",
+   "verdict": "allow",
+   "message": "residual wall around all holes satisfies the minimum",
+   "evidence": {
+    "threshold": 1,
+    "band": 0.02,
+    "holeCount": 5,
+    "measuredRays": 40,
+    "uncertainRays": 0,
+    "holeId": 0,
+    "residualWall": 15.000000000000007
+   }
+  },
+  {
+   "id": "quality/opening_radius",
+   "name": "opening_radius",
+   "rule_version": "1.2",
+   "verdict": "reject",
+   "message": "a hole opening has no rounded/chamfered transition of the required size",
+   "evidence": {
+    "threshold": 0.2,
+    "band": 0.02,
+    "holeCount": 5,
+    "openingsMeasured": 10,
+    "uncertainCount": 0,
+    "holeId": 0,
+    "openingRadius": 0
+   }
+  }
+ ]
+}
