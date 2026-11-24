@@ -3,6 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="data:,">
 <meta name="description" content="ZNGL 几何体检：STEP 零件按 10 条规则逐条判定，明确区分允许、不通过、未判定；1 件 1,299 元起。本页只含截图与说明，不提供任何软件下载。">
 <meta name="robots" content="index,follow">
 <title>ZNGL 几何体检 · 打开 STEP，先看清再谈打印</title>
@@ -155,6 +156,42 @@
     .section{padding:0}
   }
 </style>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"SoftwareApplication",
+ "name":"znk-mcp","applicationCategory":"DeveloperApplication",
+ "operatingSystem":"Windows, Linux, macOS",
+ "softwareVersion":"0.1.1",
+ "description":"零依赖 MCP stdio 服务器，通过 10 个工具把 ZNKernel-II 几何能力暴露给 AI 客户端；包内不含内核与密钥。",
+ "url":"https://github.com/haidi-ai/znk-mcp",
+ "codeRepository":"https://github.com/haidi-ai/znk-mcp",
+ "license":"https://opensource.org/licenses/MIT",
+ "isAccessibleForFree":true,
+ "offers":{"@type":"Offer","price":"0","priceCurrency":"CNY","description":"包装层 MIT；使用需另购 ZNKernel-II 内核许可"}}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Service",
+ "name":"STEP 几何体检（可制造性规则预检）",
+ "serviceType":"CAD 模型规则预检与工程复核",
+ "description":"按 10 条规则逐条给出 allow / reject / cannot_judge；cannot_judge 不等于合格；报告为工程复核意见，不构成制造保证。",
+ "provider":{"@type":"Organization","name":"ZNGL 几何体检"},
+ "areaServed":{"@type":"Country","name":"CN"},
+ "url":"https://haidi-ai.github.io/step-inspect/",
+ "offers":[
+  {"@type":"Offer","name":"S1 首单体检","price":"1299","priceCurrency":"CNY","description":"1 件 + 1 次复核 + 2 页报告"},
+  {"@type":"Offer","name":"S2 五件包","price":"3500","priceCurrency":"CNY","description":"5 件 + 每件复核 + 1 页汇总"},
+  {"@type":"Offer","name":"S3 年包","price":"12800","priceCurrency":"CNY","description":"12 件/年 + 4 次季度复核 + 4 小时支持"}]}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+ {"@type":"Question","name":"报告能保证我的零件打得出来吗？",
+  "acceptedAnswer":{"@type":"Answer","text":"不能。报告是工程复核意见，不构成制造保证：不保证可打印、不保证强度/公差/寿命/表面质量，也不保证通过任何认证。"}},
+ {"@type":"Question","name":"cannot_judge（未判定）是什么意思？",
+  "acceptedAnswer":{"@type":"Answer","text":"表示证据不足、规则不适用或能力未覆盖。未判定不等于合格，不计入允许。（详见 facts 页）"}},
+ {"@type":"Question","name":"多久能拿到报告？",
+  "acceptedAnswer":{"@type":"Answer","text":"尽力 2 个工作日（S1）/ 5 个工作日（S2），以确认件范围、收齐文件后起算；这是尽力口径，不是承诺。（详见 facts 页）"}},
+ {"@type":"Question","name":"支持哪些格式和大小？",
+  "acceptedAnswer":{"@type":"Answer","text":"STEP / STL / OBJ，单文件 ≤50 MB，单实体，单位 mm；多实体或装配体按 1.5–3 倍件价并书面确认。"}}]}
+</script>
 </head>
 <body>
 <a class="skip" href="#main">跳到主要内容</a>
