@@ -1,8 +1,8 @@
 <!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1"><link rel="icon" href="data:,">
-<title>自建样例案例库 · 20 条三态判定实录</title>
-<meta name="description" content="自建样例（非客户案例）：3 件 STEP 样例的 ZNKernel-II 20 条规则判定实录，含命令与可复现产物。">
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "CollectionPage", "name": "自建样例案例库", "inLanguage": "zh-CN", "isPartOf": {"@type": "WebSite", "name": "ZNGL 几何体检", "url": "https://haidi-ai.github.io/step-inspect/"}, "license": "https://opensource.org/licenses/MIT"}</script>
+<title>案例库 · 自建样例 + 客户授权真实件（20 条三态判定实录）</title>
+<meta name="description" content="自建样例 3 件（不使用任何客户授权数据）+ 客户授权真实件 3 件（经德科授权，本方签署待完成）：ZNKernel-II 20 条规则判定实录。原始 STEP 不提供下载。">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "CollectionPage", "name": "案例库 · 自建样例 + 客户授权真实件", "inLanguage": "zh-CN", "isPartOf": {"@type": "WebSite", "name": "ZNGL 几何体检", "url": "https://haidi-ai.github.io/step-inspect/"}, "license": "https://opensource.org/licenses/MIT"}</script>
 <style>
 :root{--ink:#0f172a;--muted:#475569;--line:#e2e8f0;--bg:#f8fafc;--card:#fff;--brand:#0f766e;
 --reject:#b91c1c;--reject-bg:#fee2e2;--cj:#6b7280;--cj-bg:#ececec;--ok:#0f766e;--ok-bg:#ccfbf1;--warn:#b45309}
@@ -39,9 +39,16 @@ ul{padding-left:1.2em}
 <header class="top"><div class="wrap"><div class="brand">ZNGL 几何体检<small>STEP 打开先看清，再谈打印</small></div>
 <a href="../index.html" style="margin-left:auto">← 回主页</a></div></header>
 <div class="wrap">
-<div class="hero"><h1>自建样例案例库</h1>
-<p class="muted">3 件自建/内部验证件，跑同一套 20 条规则；每页给出需求、判定、修正建议与复现命令。这不是客户案例，是"可复现"的样例。</p></div>
-<table><thead><tr><th style="width:26%">案例</th><th>一句话需求</th><th style="width:16%">结论</th><th style="width:14%">allow/reject/未判</th></tr></thead><tbody><tr><td><a href="C01-flange.html">C01 法兰盘</a></td><td>120×120×10 安装法兰：4×Ø10 沉孔位（本件为通孔）+ 中心 Ø30 通孔，</td><td class="reject">不通过（reject 1）</td><td>12 / 1 / 7</td></tr><tr><td><a href="C05-pipe-fitting.html">C05 管接头</a></td><td>60×40×20 管接头：Ø20 内腔 + Ø12 通孔，检查内腔壁是否被钻穿。</td><td class="reject">不通过（reject 6）</td><td>7 / 6 / 7</td></tr><tr><td><a href="C06-thin-wall-box.html">C06 薄壁盒</a></td><td>50×40×30 封闭薄壁盒，壁厚 0.8 mm，检查能否注塑/机加。</td><td class="reject">不通过（reject 7）</td><td>4 / 7 / 9</td></tr></tbody></table>
-<p class="small muted" style="margin-top:14px">口径：<b>cannot_judge 不是通过</b>；reject 件在报告里标注"设计缺陷示例"，不作合格件展示。</p>
-<div class="foot">MIT · 页面只含截图与文字，不提供任何软件下载 · <a href="../index.html">回主页</a></div>
+<div class="hero"><h1>案例库</h1>
+<p class="muted">两类：<b>自建样例</b>（公开 3 件，完整可复现，<b>不使用</b>任何客户授权数据）与<b>客户授权真实件</b>（经德科授权，只给结果与截图，<b>不提供原始 STEP 下载</b>）。同一套 20 条三态规则、同一个 2.28.4 CLI。</p></div>
+
+<h2>客户真实件（经授权 · 本方签署待完成）</h2>
+<div class="note">数据由黑龙江省德科精密机电设备有限公司提供并授权（授权书 SHA256 <code>7B6AB753…</code>，签署日期 2026-11-24；<b>本方签署待完成</b>）。按授权书，原始 <code>.STEP</code> 不提供下载；每页只给文件元信息、20 条三态、耗时与截图。</div>
+<table><thead><tr><th style="width:24%">案例</th><th>文件 / 规模</th><th style="width:18%">结论</th><th style="width:14%">allow/reject/未判</th></tr></thead><tbody><tr><td><a href="deke-D01.html">D01 薄板装配件</a></td><td><code>8.STEP</code> · 6,246,839 B · 35 实体 · 2,536 面 · 550×350×121 mm</td><td class="reject">不通过（reject 1）</td><td>5 / 1 / 14</td></tr><tr><td><a href="deke-D02.html">D02 环形连接件</a></td><td><code>11.STEP</code> · 213,233 B · 6 实体 · 81 面 · 1750×1850×1450 mm</td><td class="reject">不通过（reject 10）</td><td>4 / 10 / 6</td></tr><tr><td><a href="deke-D03.html">D03 大型总成</a></td><td><code>1.STEP</code> · 101,925,644 B · 462 实体 · 19,954 面 · 6641×1453×4228 mm</td><td class="reject">不通过（reject 7）</td><td>0 / 7 / 13</td></tr></tbody></table>
+<p class="small muted" style="margin-top:14px">真实件结论不美化：<b>3 件全部有 reject</b>（20 件中已跑 8 件，无一件 20/20 全 allow）；<code>cannot_judge</code> 单独计数，<b>不算通过</b>。</p>
+
+<h2>自建样例（公开 3 件 / 库内 10 件）</h2>
+<table><thead><tr><th style="width:26%">案例</th><th>一句话需求</th><th style="width:16%">结论</th><th style="width:14%">allow/reject/未判</th></tr></thead><tbody><tr><td><a href="C01-flange.html">C01 法兰盘</a></td><td>120×120×10 安装法兰：4×Ø10 沉孔位（本件为通孔）+ 中心 Ø30 通孔，检查能否下料/钻孔。</td><td class="reject">不通过（reject 1）</td><td>12 / 1 / 7</td></tr><tr><td><a href="C05-pipe-fitting.html">C05 管接头</a></td><td>60×40×20 管接头：Ø20 内腔 + Ø12 通孔，检查内腔壁是否被钻穿。</td><td class="reject">不通过（reject 6）</td><td>7 / 6 / 7</td></tr><tr><td><a href="C06-thin-wall-box.html">C06 薄壁盒</a></td><td>50×40×30 封闭薄壁盒，壁厚 0.8 mm，检查能否注塑/机加。</td><td class="reject">不通过（reject 7）</td><td>4 / 7 / 9</td></tr></tbody></table>
+<p class="small muted" style="margin-top:14px">口径：<b>cannot_judge 不是通过</b>；reject 件在报告里标注"设计缺陷示例"，不作合格件展示。本组为自建件，<b>不使用</b>任何客户授权数据。</p>
+<div class="foot">MIT · 页面只含截图与文字，不提供任何软件或模型文件下载 · <a href="../index.html">回主页</a></div>
 </div></body></html>

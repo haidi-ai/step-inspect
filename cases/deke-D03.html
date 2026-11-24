@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="data:,">
+<title>D03 大型总成 · 德科真实件 20 条三态判定实录</title>
+<meta name="description" content="客户真实件（经德科授权，本方签署待完成）：1.STEP 的 ZNKernel-II 20 条规则判定实录，含文件元信息、导入结果、逐条三态、耗时与结论；不提供原始 STEP 下载。">
+<meta name="robots" content="index,follow">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "TechArticle", "headline": "D03 大型总成：ZNKernel-II 20 条规则判定实录", "inLanguage": "zh-CN", "datePublished": "2026-11-24", "dateModified": "2026-11-24", "author": {"@type": "Organization", "name": "ZNGL 几何体检"}, "publisher": {"@type": "Organization", "name": "ZNGL 几何体检"}, "isPartOf": {"@type": "WebSite", "name": "ZNGL 几何体检", "url": "https://haidi-ai.github.io/step-inspect/"}, "about": "客户授权真实件的 STEP 可制造性判定：20 条规则、allow/reject/cannot_judge 三态", "license": "https://opensource.org/licenses/MIT", "keywords": ["STEP", "几何体检", "ZNKernel-II", "可制造性", "三态判定", "客户授权"], "mainEntityOfPage": {"@type": "WebPage", "@id": "https://haidi-ai.github.io/step-inspect/cases/D03.html"}}</script>
+<style>
+:root{--ink:#0f172a;--muted:#475569;--line:#e2e8f0;--bg:#f8fafc;--card:#fff;--brand:#0f766e;
+--reject:#b91c1c;--reject-bg:#fee2e2;--cj:#6b7280;--cj-bg:#ececec;--ok:#0f766e;--ok-bg:#ccfbf1;--warn:#b45309}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"PingFang SC","Microsoft YaHei",system-ui,"Segoe UI",sans-serif;font-size:16px;line-height:1.7}
+a{color:var(--brand);text-decoration:none}a:hover{text-decoration:underline}
+.wrap{max-width:980px;margin:0 auto;padding:0 20px}
+.top{background:#fff;border-bottom:1px solid var(--line);position:sticky;top:0;z-index:9}
+.top .wrap{display:flex;align-items:center;gap:12px;min-height:56px;flex-wrap:wrap}
+.brand{font-weight:800}.brand small{font-weight:500;color:#64748b;font-size:.75rem;display:block}
+.licensed{background:#e8f5ef;border-bottom:1px solid #86c5a8;color:#0b4f38;font-weight:700;font-size:.92rem;padding:9px 0;text-align:center;letter-spacing:.01em}
+.hero{padding:34px 0 10px}
+h1{font-size:clamp(1.5rem,4vw,2.2rem);margin:0 0 .3em;letter-spacing:-.01em}
+h2{font-size:1.15rem;margin:1.6em 0 .5em;padding-left:8px;border-left:4px solid var(--brand)}
+.muted{color:var(--muted)}.small{font-size:.86rem}
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px;margin:14px 0}
+.kpi{background:#fff;border:1px solid var(--line);border-radius:10px;padding:10px 12px}
+.kpi b{display:block;font-size:1.15rem}.kpi span{font-size:.78rem;color:#64748b}
+img.shot{width:100%;max-width:560px;border:1px solid var(--line);border-radius:10px;display:block;margin:0 auto;background:#fff}
+table{width:100%;border-collapse:collapse;font-size:.84rem;background:#fff}
+th,td{border:1px solid var(--line);padding:5px 7px;vertical-align:top;text-align:left}
+th{background:#f1f5f9;font-weight:700}
+.allow{color:var(--ok);font-weight:700}.reject{color:var(--reject);font-weight:700}.cj{color:var(--cj);font-weight:700}
+.tag{display:inline-block;border-radius:999px;padding:1px 9px;font-size:.78rem;font-weight:700}
+.t-reject{background:var(--reject-bg);color:var(--reject)}.t-cj{background:var(--cj-bg);color:var(--cj)}.t-ok{background:var(--ok-bg);color:var(--ok)}
+pre{background:#0b1220;color:#e2e8f0;border-radius:10px;padding:12px 14px;overflow:auto;font-size:.8rem;line-height:1.55}
+code{font-family:ui-monospace,Consolas,monospace}
+.note{background:#fff7ed;border:1px solid #fed7aa;border-radius:10px;padding:12px 14px;color:#7c2d12;font-size:.9rem}
+.foot{border-top:1px solid var(--line);margin-top:36px;padding:18px 0 40px;color:#64748b;font-size:.85rem}
+ul{padding-left:1.2em}
+</style></head>
+<body>
+<div class="licensed">⚠ 客户真实件 · 经授权展示 —— 数据由黑龙江省德科精密机电设备有限公司提供并授权（授权书 SHA256 <code>7B6AB753…</code>，签署日期 2026-11-24；<b>本方签署待完成</b>）</div>
+<header class="top"><div class="wrap"><div class="brand">ZNGL 几何体检<small>STEP 打开先看清，再谈打印</small></div>
+<a href="../index.html" style="margin-left:auto">← 回主页</a><a href="index.html">全部案例</a></div></header>
+
+<div class="wrap">
+<div class="hero">
+<h1>D03 大型总成：7 条 reject · 13 条未判</h1>
+<p class="muted">客户真实件（授权来源：黑龙江省德科精密机电设备有限公司）。判定对象 <code>1.STEP</code>；本例只展示结论与截图，<b>原始 STEP 不提供下载</b>。</p>
+</div>
+
+<div class="kpis">
+<div class="kpi"><b>0</b><span>allow 允许</span></div>
+<div class="kpi"><b>7</b><span>reject 不通过</span></div>
+<div class="kpi"><b>13</b><span>cannot_judge 未判（≠通过）</span></div>
+<div class="kpi"><b>132.01 s</b><span>判定耗时（adjudicate）</span></div>
+<div class="kpi"><b>148.72 s</b><span>导入 + 判定耗时</span></div>
+</div>
+
+<h2>3D 外形</h2>
+<div class="note"><b>本页无截图</b>：STL 导出在本件上失败（STL 导出两次都失败：默认弦差一次跑满 425.2 s 无产物，粗弦差 5 mm 一次跑满 420 s 上限无产物（19,954 面 / 462 实体）），没有可渲染的网格；按"取不到证就写未验证"处理，不画示意图。</div>
+<p class="small muted">本件只给结果与文字结论；原始 STEP 与 STL 均不对外提供。</p>
+
+<h2>文件元信息</h2>
+<table><tbody>
+<tr><th style="width:22%">文件名</th><td>1.STEP</td></tr>
+<tr><th style="width:22%">字节数</th><td>101,925,644 B（97.20 MB）</td></tr>
+<tr><th style="width:22%">SHA256</th><td><code>CA852B9E9ED400050468D82474ECC40EE383286883220DEAEF646788052B81C0</code></td></tr>
+<tr><th style="width:22%">格式 / 单位</th><td>step / mm</td></tr>
+<tr><th style="width:22%">来源</th><td>黑龙江省德科精密机电设备有限公司提供（附件A 20 件之一），授权书 SHA256 <code>7B6AB753…</code></td></tr>
+</tbody></table>
+
+<h2>导入结果（CLI import 原样）</h2>
+<table><tbody>
+<tr><th style="width:22%">导入结果</th><td>imported=True，format=step，length_unit=mm</td></tr>
+<tr><th style="width:22%">实体数</th><td>solids=462 / shells=462</td></tr>
+<tr><th style="width:22%">拓扑</th><td>faces=19954（平面 11169 / 曲面 8785）· edges=55680 · vertices=36926</td></tr>
+<tr><th style="width:22%">有效性</th><td>valid=True · closed=True · warning=1（STEP: normalized orientation of 18 curved face(s) in closed shells）</td></tr>
+<tr><th style="width:22%">包围盒</th><td>6641.4 × 1452.5 × 4227.6 mm（bbox=[-1777.3640122259717, -97.50000019999999, -2877.5804993231122] … [4863.999573535901, 1355.0000002000002, 1350.0000002000002]）</td></tr>
+<tr><th style="width:22%">体积 / 面积</th><td>未测量（import 快路径不测质量属性；判定只吃面/边/网格）</td></tr>
+</tbody></table>
+
+<h2>20 条判定（内核原样输出）</h2>
+<table><thead><tr><th style="width:38%">规则</th><th style="width:12%">判定</th><th>内核消息</th></tr></thead><tbody>
+<tr><td><code>manufacturing/min_wall_thickness</code></td><td class="cj">未判</td><td>tessellation budget insufficient for a complete mesh; cannot judge</td></tr>
+<tr><td><code>manufacturing/hole_penetration</code></td><td class="cj">未判</td><td>tessellation budget insufficient for a complete mesh; cannot judge</td></tr>
+<tr><td><code>manufacturing/draft_angle</code></td><td class="cj">未判</td><td>draft angle of curved faces needs the general draft analysis (not judged)</td></tr>
+<tr><td><code>manufacturing/sliver_face</code></td><td class="cj">未判</td><td>sliver ratio of curved faces needs face-area integration (not judged)</td></tr>
+<tr><td><code>quality/non_manifold</code></td><td class="reject">reject</td><td>topology validation reported 20 issue(s); first: edge#21075: curve endpoints (79.682,72.315,-17)-(80.9932,73.9349,-17) do not match vertices within tolerance</td></tr>
+<tr><td><code>assembly/interference</code></td><td class="cj">未判</td><td>assembly interference needs two non-empty bodies</td></tr>
+<tr><td><code>manufacturing/blade_thin_section</code></td><td class="cj">未判</td><td>tessellation budget insufficient for a complete mesh; cannot judge</td></tr>
+<tr><td><code>manufacturing/hole_depth_ratio</code></td><td class="reject">reject</td><td>hole depth-to-diameter ratio exceeds the deep-hole threshold</td></tr>
+<tr><td><code>manufacturing/sharp_internal_corner</code></td><td class="reject">reject</td><td>internal corner opening angle is below the sharp-corner threshold</td></tr>
+<tr><td><code>quality/small_feature</code></td><td class="reject">reject</td><td>smallest feature (B-rep edge) is below the minimum feature size</td></tr>
+<tr><td><code>manufacturing/undercut</code></td><td class="cj">未判</td><td>tessellation budget insufficient for a complete mesh; cannot judge</td></tr>
+<tr><td><code>manufacturing/min_hole_diameter</code></td><td class="reject">reject</td><td>a hole diameter is below the minimum hole-diameter threshold</td></tr>
+<tr><td><code>manufacturing/wall_thickness_uniformity</code></td><td class="cj">未判</td><td>tessellation budget insufficient for a complete mesh; cannot judge</td></tr>
+<tr><td><code>quality/stress_concentration_corner</code></td><td class="cj">未判</td><td>internal corner stress proxy or measurement lies inside the decision band</td></tr>
+<tr><td><code>manufacturing/missing_fillet</code></td><td class="reject">reject</td><td>a sharp convex edge has no fillet/chamfer transition</td></tr>
+<tr><td><code>manufacturing/bridge_span</code></td><td class="cj">未判</td><td>tessellation budget insufficient for a complete mesh; cannot judge</td></tr>
+<tr><td><code>manufacturing/overhang_angle</code></td><td class="cj">未判</td><td>tessellation budget insufficient for a complete mesh; cannot judge</td></tr>
+<tr><td><code>manufacturing/step_height_ratio</code></td><td class="cj">未判</td><td>tessellation budget insufficient for a complete mesh; cannot judge</td></tr>
+<tr><td><code>manufacturing/residual_wall</code></td><td class="cj">未判</td><td>tessellation budget insufficient for a complete mesh; cannot judge</td></tr>
+<tr><td><code>quality/opening_radius</code></td><td class="reject">reject</td><td>a hole opening has no rounded/chamfered transition of the required size</td></tr>
+</tbody></table>
+<p class="small muted">口径：<b>cannot_judge 不是 allow</b>——内核明确写 undecided（CLI policy 原文：undecided - NOT an allow; never treat as a pass）。</p>
+
+<h2>耗时（机器段 = CLI 调用墙钟）</h2>
+<pre><code>
+| 阶段 | 墙钟 |
+|---|---:|
+| import（解析 + 拓扑 + bbox） | 16.71 s |
+| adjudicate（20 条规则） | 132.01 s |
+| 合计（机器段） | 148.72 s |
+</code></pre>
+
+<h2>结论</h2>
+<div class="note"><span class="tag t-reject">不通过（reject 7）</span> 101.9 MB、462 实体、19,954 面的真实总成：导入成功（valid=true / closed=true，17 s），判定 132 s 出 20 条——7 条 reject（non_manifold 20 处问题、深孔 L/D 超限、尖内角、最小特征尺寸、最小孔径、缺倒角/圆角、孔口无倒圆），13 条 cannot_judge（其中 8 条是「tessellation budget insufficient」：面数超出网格预算，内核明确不判）。allow=0。结论：本件不能当合格件，也不能当「全 allow」样例；大件的网格预算与导出耗时是当前 2.28.4 CLI 的真实边界。
+<br><span class="small">reject 规则：<code>non_manifold</code>、<code>hole_depth_ratio</code>、<code>sharp_internal_corner</code>、<code>small_feature</code>、<code>min_hole_diameter</code>、<code>missing_fillet</code>、<code>opening_radius</code><br>未判规则：<code>min_wall_thickness</code>、<code>hole_penetration</code>、<code>draft_angle</code>、<code>sliver_face</code>、<code>interference</code>、<code>blade_thin_section</code>、<code>undercut</code>、<code>wall_thickness_uniformity</code>、<code>stress_concentration_corner</code>、<code>bridge_span</code>、<code>overhang_angle</code>、<code>step_height_ratio</code>、<code>residual_wall</code><br>allow 规则：—</span></div>
+
+<h2>授权与使用限制</h2>
+<ul class="small">
+<li>数据由黑龙江省德科精密机电设备有限公司提供并授权（授权书 SHA256 <code>7B6AB753…</code>，签署日期 2026-11-24；<b>本方签署待完成</b>）。</li>
+<li>授权书目前 <b>甲方已盖章签字，乙方（益分田）未盖章未签字未填日期</b>，按第八条 8.1 尚未生效；双签完成前，本件只作内部验证，不作对外案例/投标材料。</li>
+<li>本页只给<b>结果与截图</b>：不提供原始 <code>.STEP</code> 下载，也不提供导出的 STL/网格文件。</li>
+<li>结论是技术分析意见，不构成对产品合格/安全/性能的保证或认证（授权书第九条 9.1）。</li>
+</ul>
+
+<div class="foot">
+<b>数据来源声明</b>：客户真实件，数据由黑龙江省德科精密机电设备有限公司提供并授权；授权书 SHA256 <code>7B6AB753…</code>（完整值见 <code>E:\ai-crew-assets\entity\authorizations\manifest.csv</code>），签署日期 2026-11-24，<b>本方签署待完成</b>。<br>
+ZNKernel-II 2.28.4 · 规则集 20 条三态 · 生成于 2026-11-24 · 任务 T-0842 · <a href="index.html">全部案例</a>
+</div>
+</div></body></html>
