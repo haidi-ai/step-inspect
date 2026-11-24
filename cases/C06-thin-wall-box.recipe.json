@@ -143,7 +143,7 @@
    ]
   },
   "tessellation": null,
-  "rebuild_ms": 20.6,
+  "rebuild_ms": 22.8,
   "rebuild_volume_mm3": 7216.895999999942,
   "rebuild_volume_match": true,
   "rebuild_source": "analytic"
