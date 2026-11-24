@@ -1,0 +1,83 @@
+# step-inspect License
+
+Copyright (c) 2026 haidi-ai (ZNGL project)
+<https://github.com/haidi-ai/step-inspect>
+
+This repository contains two different kinds of material under two different
+sets of terms. Read both parts before reusing anything.
+
+## 1. Code and pages — MIT License
+
+The MIT License text at the bottom of this file applies **only** to the source
+code of this repository: the HTML, CSS and JavaScript that make up
+`index.html` and `sample-report.html` (page structure, styles, inline scripts,
+and form logic), plus any future code files added to this repository.
+
+## 2. Marketing content — all rights reserved
+
+The MIT License does **not** apply to the content of this repository. The
+following material remains copyright (c) 2026 haidi-ai (ZNGL project), all
+rights reserved, and may not be copied, modified, republished or used to
+promote another product or service without prior written permission:
+
+- the marketing copy in `index.html` and `sample-report.html`: product and
+  service descriptions, claims, pricing, delivery terms, FAQ text, and the
+  "关注我们" social block;
+- the sample report text in `sample-report.html` (illustrative; the customer
+  in it is fictional, not a real project record);
+- all images and screenshots under `img/` (`demo.png`, `A-demo-holed.png`,
+  `B-upload-holed.png`, and any future images);
+- the text of `README.md`, `README-DEPLOY.md`, `manifest.json` and
+  `img/SHA256SUMS.txt`, which is provided for reference and deployment.
+
+Linking to this repository or to the published page is allowed and needs no
+permission. Quoting a short excerpt with attribution for commentary or review
+is allowed.
+
+## 3. What this repository does not contain
+
+This repository is a static marketing/demo site only. It does **not** contain
+or license any of the following:
+
+- the ZNGL engine, `dist/`, SDK, or any ZNGL runtime code;
+- the ZNKernel-II kernel, `znk2_cli`, or any kernel binary;
+- license files, license keys, signing material, or license-check logic;
+- customer drawings, customer names, or personal data.
+
+No license granted here extends to ZNGL, ZNKernel-II or any other product.
+Those are governed by their own commercial terms.
+
+## 4. Trademarks
+
+"ZNGL", "ZNKernel-II" and associated logos are marks of their owner. The MIT
+License does not grant trademark rights. Do not use these names or logos in a
+way that suggests endorsement.
+
+## 5. No warranty
+
+The code is provided "as is", without warranty of any kind, as stated in the
+MIT text below.
+
+---
+
+MIT License
+
+Copyright (c) 2026 haidi-ai (ZNGL project)
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
