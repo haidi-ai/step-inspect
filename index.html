@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="icon" href="data:,">
-<meta name="description" content="ZNGL 几何体检：STEP 零件按 10 条规则逐条判定，明确区分允许、不通过、未判定；1 件 1,299 元起。本页只含截图与说明，不提供任何软件下载。">
+<meta name="description" content="ZNGL 几何体检：STEP 零件按 20 条规则（2.28.3 起）逐条判定，明确区分允许、不通过、未判定；1 件 1,299 元起。本页只含截图与说明，不提供任何软件下载。">
 <meta name="robots" content="index,follow">
 <title>ZNGL 几何体检 · 打开 STEP，先看清再谈打印</title>
 <style>
@@ -172,7 +172,7 @@
 {"@context":"https://schema.org","@type":"Service",
  "name":"STEP 几何体检（可制造性规则预检）",
  "serviceType":"CAD 模型规则预检与工程复核",
- "description":"按 10 条规则逐条给出 allow / reject / cannot_judge；cannot_judge 不等于合格；报告为工程复核意见，不构成制造保证。",
+ "description":"按 20 条规则（2.28.3 起）逐条给出 allow / reject / cannot_judge；cannot_judge 不等于合格；报告为工程复核意见，不构成制造保证。",
  "provider":{"@type":"Organization","name":"ZNGL 几何体检"},
  "areaServed":{"@type":"Country","name":"CN"},
  "url":"https://haidi-ai.github.io/step-inspect/",
@@ -219,13 +219,14 @@
     <div class="wrap">
       <span class="eyebrow">工程复核服务 · 不是打印担保</span>
       <h1>打开 STEP，先看清再谈打印</h1>
-      <p class="lead">按 10 条规则逐条判定你的零件：<b>允许</b>、<b>不通过</b>、<b>未判定</b>三项分开写。未判定就写未判定，不折成通过，也不计入允许。</p>
+      <p class="lead">按 20 条规则（2.28.3 起）逐条判定你的零件：<b>允许</b>、<b>不通过</b>、<b>未判定</b>三项分开写。未判定就写未判定，不折成通过，也不计入允许。</p>
       <ul class="badges">
-        <li>10 条规则逐条给证据</li>
+        <li>20 条规则（2.28.3 起）逐条给证据</li>
         <li>人工复核 ≤20 分钟</li>
         <li>1 件起，1,299 元/件</li>
         <li>报告 2 页，含免责边界</li>
       </ul>
+      <p class="fineprint">规则集版本口径：对外统一“20 条（2.28.3 起）”；2.28.1 及以前为 10 条，2.28.2 起 20 条。下方样例报告为 10 条期历史样例（5/1/4），不冒充 20 条期结论。</p>
       <div class="cta">
         <a class="btn btn-primary" href="mailto:huishanzhao@126.com?subject=%E3%80%90%E5%87%A0%E4%BD%95%E4%BD%93%E6%A3%80%E5%92%A8%E8%AF%A2%E3%80%91STEP%20%E9%9B%B6%E4%BB%B6%EF%BC%881%20%E4%BB%B6%EF%BC%89&amp;body=%E4%BD%A0%E5%A5%BD%EF%BC%8C%E6%88%91%E6%83%B3%E5%81%9A%20STEP%20%E5%87%A0%E4%BD%95%E4%BD%93%E6%A3%80%E3%80%82%0A%0A%E5%85%AC%E5%8F%B8%EF%BC%9A%0A%E7%A7%B0%E5%91%BC%EF%BC%9A%0A%E8%81%94%E7%B3%BB%E6%96%B9%E5%BC%8F%EF%BC%9A%0A%E9%9B%B6%E4%BB%B6%E6%95%B0%EF%BC%9A%0A%E6%96%87%E4%BB%B6%E6%A0%BC%E5%BC%8F%EF%BC%9ASTEP%20%2F%20STL%20%2F%20OBJ%0A%E9%9C%80%E6%B1%82%EF%BC%9A">发一个零件试试</a>
         <a class="btn btn-ghost" href="sample-report.html">看 1 页样例报告</a>
@@ -243,7 +244,7 @@
         <article class="card">
           <span class="num">1</span>
           <h3>逐条规则，不合并</h3>
-          <p>10 条规则各自给判定与证据（面号、边号、实测值），能一条条指回体检结果；不把多条问题糊成一句"有问题"。</p>
+          <p>20 条规则（2.28.3 起）各自给判定与证据（面号、边号、实测值），能一条条指回体检结果；不把多条问题糊成一句"有问题"。</p>
         </article>
         <article class="card">
           <span class="num">2</span>
@@ -306,7 +307,7 @@
       <p class="lead">报告固定 2 页结构；这里放的是<b>脱敏样例</b>（虚构客户 + 内置样例件），只演示格式与口径，不构成任何真实零件结论。</p>
       <div class="report-preview" style="margin-top:24px">
         <div style="display:flex;gap:12px;justify-content:space-between;flex-wrap:wrap">
-          <div><b>几何体检报告 · 样例</b><br><span style="font-size:.85rem;color:var(--soft)">报告号 J-20261123-SAMPLE-R1 · 规则集 10 条 · 客户：样例客户（虚构）</span></div>
+          <div><b>几何体检报告 · 样例</b><br><span style="font-size:.85rem;color:var(--soft)">报告号 J-20261123-SAMPLE-R1 · 规则集 10 条（历史样例：2.28.1 及以前为 10 条；2.28.2 起 20 条） · 客户：样例客户（虚构）</span></div>
           <a class="btn btn-ghost" href="sample-report.html" style="align-self:center">查看完整样例 →</a>
         </div>
         <div class="counts">
@@ -416,7 +417,7 @@
       <div style="margin-top:22px;max-width:900px">
         <details>
           <summary>报告能保证我的零件打得出来吗？</summary>
-          <p>不能。报告是工程复核意见，<b>不构成制造保证</b>：不保证可打印、不保证强度/公差/寿命/表面质量，也不保证通过任何认证。它只说明在所给文件版本与所列 10 条规则下看到了什么，最终工艺验证与放行仍由你方负责。</p>
+          <p>不能。报告是工程复核意见，<b>不构成制造保证</b>：不保证可打印、不保证强度/公差/寿命/表面质量，也不保证通过任何认证。它只说明在所给文件版本与所列 20 条规则（2.28.3 起）下看到了什么，最终工艺验证与放行仍由你方负责。</p>
         </details>
         <details>
           <summary>cannot_judge（未判定）是什么意思？</summary>
