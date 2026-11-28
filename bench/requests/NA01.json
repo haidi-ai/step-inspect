@@ -1,0 +1,16 @@
+{
+ "op": "adjudicate",
+ "file": "inputs/case01-draft-0p5.step",
+ "rule": "manufacturing/draft_angle",
+ "cache_enabled": false,
+ "params": {
+  "process": "injection_molding",
+  "material": "ABS",
+  "pullDirection": [
+   0,
+   0,
+   1
+  ],
+  "minAngleDeg": 1.0
+ }
+}

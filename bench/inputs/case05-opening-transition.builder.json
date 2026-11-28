@@ -1,0 +1,46 @@
+{
+  "kernel": "ZNKernel-II 2.40.0",
+  "entry": "C ABI zn_solid_feature",
+  "request": {
+    "op": "revolve",
+    "profile": [
+      [
+        2.0,
+        0,
+        0
+      ],
+      [
+        20.0,
+        0,
+        0
+      ],
+      [
+        20.0,
+        0,
+        20.0
+      ],
+      [
+        2.1,
+        0,
+        20.0
+      ],
+      [
+        2.0,
+        0,
+        19.9
+      ]
+    ],
+    "axis_origin": [
+      0,
+      0,
+      0
+    ],
+    "axis_dir": [
+      0,
+      0,
+      1
+    ],
+    "angle": 6.283185307179586
+  },
+  "note": "revolved ring R20 H20, through hole r2, countersink 2.0->2.1 over z 19.9..20 (radial width 0.1)"
+}

@@ -1,0 +1,190 @@
+{
+ "schema": "znk2-cli/1",
+ "ok": true,
+ "result": {
+  "count": 1,
+  "rule_selector": "manufacturing/hole_depth_ratio",
+  "body": {
+   "file": "E:/ai-crew-assets/cases/bench-v0/inputs/case03-blind-hole-ld.step"
+  },
+  "verdict_summary": {
+   "allow": 0,
+   "reject": 1,
+   "cannot_judge": 0
+  },
+  "applicability_summary": {
+   "applicable": 1,
+   "not_applicable": 0,
+   "undetermined": 0
+  },
+  "results": [
+   {
+    "id": "manufacturing/hole_depth_ratio",
+    "namespace": "manufacturing",
+    "name": "hole_depth_ratio",
+    "verdict": "reject",
+    "applicability": "applicable",
+    "rule_version": "1.2",
+    "message": "hole depth-to-diameter ratio exceeds the deep-hole threshold",
+    "evidence": [
+     {
+      "key": "threshold",
+      "value": 5,
+      "unit": "ratio"
+     },
+     {
+      "key": "band",
+      "value": 0.02,
+      "unit": "ratio"
+     },
+     {
+      "key": "holeCount",
+      "value": 1,
+      "unit": "count"
+     },
+     {
+      "key": "throughCount",
+      "value": 0,
+      "unit": "count"
+     },
+     {
+      "key": "throughExcluded",
+      "value": 0,
+      "unit": "count"
+     },
+     {
+      "key": "blindCount",
+      "value": 1,
+      "unit": "count"
+     },
+     {
+      "key": "uncertainCount",
+      "value": 0,
+      "unit": "count"
+     },
+     {
+      "key": "holeId",
+      "value": 0,
+      "unit": "id"
+     },
+     {
+      "key": "depth",
+      "value": 15,
+      "unit": "model"
+     },
+     {
+      "key": "diameter",
+      "value": 2,
+      "unit": "model"
+     },
+     {
+      "key": "maxDepthRatio",
+      "value": 7.5,
+      "unit": "ratio"
+     },
+     {
+      "key": "depthErrorBound",
+      "value": 1e-06,
+      "unit": "model"
+     }
+    ],
+    "mesh": {
+     "status": "not_used",
+     "reason": "",
+     "error": "",
+     "chord_tol": 0,
+     "estimated_triangles": 0,
+     "actual_triangles": 0,
+     "coarsen": 1
+    },
+    "error_bound": {
+     "epsilon": 0,
+     "margin": 0,
+     "ratio": 0,
+     "exceeded": false,
+     "gate": "not_applicable"
+    },
+    "measurement": {
+     "valid": true,
+     "value": 15,
+     "errorBound": 1e-06,
+     "method": "analytic"
+    }
+   }
+  ],
+  "wall_budget": {
+   "enabled": true,
+   "exhausted": false,
+   "completed_rules": [
+    "manufacturing/hole_depth_ratio"
+   ],
+   "completed_count": 1,
+   "skipped_rules": [],
+   "skipped_count": 0,
+   "prejudged_rules": [],
+   "prejudged_count": 0,
+   "timing": {
+    "volatile": true,
+    "basis": "runtime-wall-clock",
+    "budget_sec": 119.994709,
+    "elapsed_sec": 6.1e-05,
+    "within_budget_1_1": true
+   }
+  },
+  "policy": {
+   "cannot_judge": "undecided - NOT an allow; never treat as a pass",
+   "not_applicable": "precondition absent - not an allow, not a reject"
+  },
+  "wall_budget_exhausted_rules": 0,
+  "trace": {
+   "fileSha": "f63f6cc3c8a809c414b5b662a720fd52dcf58eb5e47c5c41d26934bd602f1973",
+   "fileShaRaw": "46ba5c0192ec26db85fd03f6261aea41e85175ec2523b71adbd68105f398297f",
+   "fileShaNormalized": "f63f6cc3c8a809c414b5b662a720fd52dcf58eb5e47c5c41d26934bd602f1973",
+   "recipeSha": "",
+   "kernelVersion": "2.40.0",
+   "ruleVersion": "1.2",
+   "threshold": {
+    "maxDepthRatio": 7.5,
+    "threshold": 5
+   },
+   "licenseId": "ZNK2-INTERNAL-2028",
+   "runId": "run-1795869645867-1"
+  },
+  "cache": {
+   "hit": false,
+   "ageSec": null,
+   "ttlSec": 86400,
+   "key": "7ad21a74a5a9de0bd2d1d1ee9932b51c21ef20079613c1985b2977149a9de191",
+   "enabled": false,
+   "stored": false,
+   "cacheable": false,
+   "failureKind": "",
+   "reason": "",
+   "note": "cache disabled (--no-cache or ZNK_CACHE_NEG=0)"
+  },
+  "negative_cache": {
+   "hit": false,
+   "enabled": false,
+   "key": "7ad21a74a5a9de0bd2d1d1ee9932b51c21ef20079613c1985b2977149a9de191",
+   "chord": "auto",
+   "budget": "tribudget=2000000;facegate=5000;quota_ms=auto;quota_faces=0;adj_budget_ms=0;adj_wall_sec=120.000000",
+   "scope": "rule=manufacturing/hole_depth_ratio;params={\"maxDepthRatio\":5}",
+   "ttl_sec": 86400,
+   "failure_kind": "",
+   "stored": false
+  },
+  "wall": {
+   "enabled": true,
+   "budget_sec": 120,
+   "cached": false,
+   "timing": {
+    "volatile": true,
+    "basis": "runtime-wall-clock",
+    "kernel_budget_sec": 119.994709,
+    "kernel_elapsed_sec": 6.1e-05,
+    "total_elapsed_sec": 0.008416,
+    "within_budget_1_1": true
+   }
+  }
+ }
+}

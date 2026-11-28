@@ -1,0 +1,177 @@
+{
+ "schema": "znk2-cli/1",
+ "ok": true,
+ "result": {
+  "count": 1,
+  "rule_selector": "manufacturing/wall_thickness_uniformity",
+  "body": {
+   "file": "E:/ai-crew-assets/cases/bench-v0/inputs/case04-wall-uneven.step"
+  },
+  "verdict_summary": {
+   "allow": 0,
+   "reject": 1,
+   "cannot_judge": 0
+  },
+  "applicability_summary": {
+   "applicable": 1,
+   "not_applicable": 0,
+   "undetermined": 0
+  },
+  "results": [
+   {
+    "id": "manufacturing/wall_thickness_uniformity",
+    "namespace": "manufacturing",
+    "name": "wall_thickness_uniformity",
+    "verdict": "reject",
+    "applicability": "applicable",
+    "rule_version": "1.2",
+    "message": "wall thickness varies more than the uniformity threshold",
+    "evidence": [
+     {
+      "key": "threshold",
+      "value": 0.25,
+      "unit": "ratio"
+     },
+     {
+      "key": "band",
+      "value": 0.02,
+      "unit": "ratio"
+     },
+     {
+      "key": "maxWallThickness",
+      "value": 5,
+      "unit": "model"
+     },
+     {
+      "key": "samples",
+      "value": 28,
+      "unit": "count"
+     },
+     {
+      "key": "minThickness",
+      "value": 0.9999999999999999,
+      "unit": "model"
+     },
+     {
+      "key": "familySamples",
+      "value": 8,
+      "unit": "count"
+     },
+     {
+      "key": "minFamilyThickness",
+      "value": 0.9999999999999999,
+      "unit": "model"
+     },
+     {
+      "key": "maxFamilyThickness",
+      "value": 3.9999999999999996,
+      "unit": "model"
+     },
+     {
+      "key": "variation",
+      "value": 0.75,
+      "unit": "ratio"
+     }
+    ],
+    "mesh": {
+     "status": "ok",
+     "reason": "",
+     "error": "",
+     "chord_tol": 0.050159745110995135,
+     "estimated_triangles": 29.400000000000002,
+     "actual_triangles": 28,
+     "coarsen": 1
+    },
+    "error_bound": {
+     "epsilon": 0.10031954038173538,
+     "margin": 0,
+     "ratio": 0,
+     "exceeded": false,
+     "gate": "not_applicable"
+    },
+    "measurement": {
+     "valid": false,
+     "value": 0,
+     "errorBound": 0,
+     "method": "none"
+    }
+   }
+  ],
+  "wall_budget": {
+   "enabled": true,
+   "exhausted": false,
+   "completed_rules": [
+    "manufacturing/wall_thickness_uniformity"
+   ],
+   "completed_count": 1,
+   "skipped_rules": [],
+   "skipped_count": 0,
+   "prejudged_rules": [],
+   "prejudged_count": 0,
+   "timing": {
+    "volatile": true,
+    "basis": "runtime-wall-clock",
+    "budget_sec": 119.993514,
+    "elapsed_sec": 0.000298,
+    "within_budget_1_1": true
+   }
+  },
+  "policy": {
+   "cannot_judge": "undecided - NOT an allow; never treat as a pass",
+   "not_applicable": "precondition absent - not an allow, not a reject"
+  },
+  "wall_budget_exhausted_rules": 0,
+  "trace": {
+   "fileSha": "069e7f2c3526e0e88226e366ce76e443bc86630fa1e2e686156357a7a7db4cbb",
+   "fileShaRaw": "01a0d8d0c2b2bb71f24a03354955b8250e88f854d5c650a6f2fb4f5a7acbedde",
+   "fileShaNormalized": "069e7f2c3526e0e88226e366ce76e443bc86630fa1e2e686156357a7a7db4cbb",
+   "recipeSha": "",
+   "kernelVersion": "2.40.0",
+   "ruleVersion": "1.2",
+   "threshold": {
+    "maxVariation": 0.25,
+    "maxWallThickness": 5,
+    "threshold": 0.25,
+    "minThickness": 0.9999999999999999
+   },
+   "licenseId": "ZNK2-INTERNAL-2028",
+   "runId": "run-1795869645894-1"
+  },
+  "cache": {
+   "hit": false,
+   "ageSec": null,
+   "ttlSec": 86400,
+   "key": "08851580fd63f40ba8b1746cffbe360d10a6c41402fbb9ea0e4c4aee8e16fe75",
+   "enabled": false,
+   "stored": false,
+   "cacheable": false,
+   "failureKind": "",
+   "reason": "",
+   "note": "cache disabled (--no-cache or ZNK_CACHE_NEG=0)"
+  },
+  "negative_cache": {
+   "hit": false,
+   "enabled": false,
+   "key": "08851580fd63f40ba8b1746cffbe360d10a6c41402fbb9ea0e4c4aee8e16fe75",
+   "chord": "auto",
+   "budget": "tribudget=2000000;facegate=5000;quota_ms=auto;quota_faces=0;adj_budget_ms=0;adj_wall_sec=120.000000",
+   "scope": "rule=manufacturing/wall_thickness_uniformity;params={\"maxVariation\":0.25,\"maxWallThickness\":5}",
+   "ttl_sec": 86400,
+   "failure_kind": "",
+   "stored": false
+  },
+  "wall": {
+   "enabled": true,
+   "budget_sec": 120,
+   "cached": false,
+   "timing": {
+    "volatile": true,
+    "basis": "runtime-wall-clock",
+    "kernel_budget_sec": 119.993514,
+    "kernel_elapsed_sec": 0.000298,
+    "total_elapsed_sec": 0.009731,
+    "within_budget_1_1": true
+   }
+  }
+ }
+}

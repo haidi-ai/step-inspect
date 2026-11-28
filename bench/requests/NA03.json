@@ -1,0 +1,9 @@
+{
+ "op": "adjudicate",
+ "file": "inputs/case03-blind-hole-ld.step",
+ "rule": "manufacturing/hole_depth_ratio",
+ "cache_enabled": false,
+ "params": {
+  "maxDepthRatio": 5.0
+ }
+}

@@ -1,0 +1,150 @@
+{
+ "schema": "znk2-cli/1",
+ "ok": true,
+ "result": {
+  "count": 1,
+  "rule_selector": "assembly/interference",
+  "body": {
+   "file": "E:/ai-crew-assets/cases/bench-v0/inputs/case02-interference-a.step"
+  },
+  "verdict_summary": {
+   "allow": 0,
+   "reject": 1,
+   "cannot_judge": 0
+  },
+  "applicability_summary": {
+   "applicable": 1,
+   "not_applicable": 0,
+   "undetermined": 0
+  },
+  "results": [
+   {
+    "id": "assembly/interference",
+    "namespace": "assembly",
+    "name": "interference",
+    "verdict": "reject",
+    "applicability": "applicable",
+    "rule_version": "1.0",
+    "message": "assembly interference volume exceeds the allowance",
+    "evidence": [
+     {
+      "key": "threshold",
+      "value": 0,
+      "unit": "model^3"
+     },
+     {
+      "key": "band",
+      "value": 0.02,
+      "unit": "ratio"
+     },
+     {
+      "key": "pair",
+      "value": 0,
+      "unit": "id"
+     },
+     {
+      "key": "interferenceVolume",
+      "value": 1000.0000000000001,
+      "unit": "model^3"
+     }
+    ],
+    "mesh": {
+     "status": "not_used",
+     "reason": "",
+     "error": "",
+     "chord_tol": 0,
+     "estimated_triangles": 0,
+     "actual_triangles": 0,
+     "coarsen": 1
+    },
+    "error_bound": {
+     "epsilon": 0,
+     "margin": 0,
+     "ratio": 0,
+     "exceeded": false,
+     "gate": "not_applicable"
+    },
+    "measurement": {
+     "valid": false,
+     "value": 0,
+     "errorBound": 0,
+     "method": "none"
+    }
+   }
+  ],
+  "wall_budget": {
+   "enabled": true,
+   "exhausted": false,
+   "completed_rules": [
+    "assembly/interference"
+   ],
+   "completed_count": 1,
+   "skipped_rules": [],
+   "skipped_count": 0,
+   "prejudged_rules": [],
+   "prejudged_count": 0,
+   "timing": {
+    "volatile": true,
+    "basis": "runtime-wall-clock",
+    "budget_sec": 119.988944,
+    "elapsed_sec": 0.000581,
+    "within_budget_1_1": true
+   }
+  },
+  "policy": {
+   "cannot_judge": "undecided - NOT an allow; never treat as a pass",
+   "not_applicable": "precondition absent - not an allow, not a reject"
+  },
+  "wall_budget_exhausted_rules": 0,
+  "trace": {
+   "fileSha": "1cc1064f80bd99ce15adc122e9a22a408ca598d468b0d063380adb0b8d354b36",
+   "fileShaRaw": "0d4896bba66e4cfa845ffb6302f64fd149352a47eab176b5784e0294a4fe783f",
+   "fileShaNormalized": "1cc1064f80bd99ce15adc122e9a22a408ca598d468b0d063380adb0b8d354b36",
+   "recipeSha": "",
+   "kernelVersion": "2.40.0",
+   "ruleVersion": "1.0",
+   "threshold": {
+    "maxInterferenceVolume": 0,
+    "threshold": 0
+   },
+   "licenseId": "ZNK2-INTERNAL-2028",
+   "runId": "run-1795869645834-1"
+  },
+  "cache": {
+   "hit": false,
+   "ageSec": null,
+   "ttlSec": 86400,
+   "key": "b61af6b755371f4dcad5131dfcee81696a282a51128eb647f1d5372923eee07b",
+   "enabled": false,
+   "stored": false,
+   "cacheable": false,
+   "failureKind": "",
+   "reason": "",
+   "note": "cache disabled (--no-cache or ZNK_CACHE_NEG=0)"
+  },
+  "negative_cache": {
+   "hit": false,
+   "enabled": false,
+   "key": "b61af6b755371f4dcad5131dfcee81696a282a51128eb647f1d5372923eee07b",
+   "chord": "auto",
+   "budget": "tribudget=2000000;facegate=5000;quota_ms=auto;quota_faces=0;adj_budget_ms=0;adj_wall_sec=120.000000",
+   "scope": "rule=assembly/interference;params={\"maxInterferenceVolume\":0}",
+   "ttl_sec": 86400,
+   "failure_kind": "",
+   "stored": false
+  },
+  "wall": {
+   "enabled": true,
+   "budget_sec": 120,
+   "cached": false,
+   "timing": {
+    "volatile": true,
+    "basis": "runtime-wall-clock",
+    "kernel_budget_sec": 119.988944,
+    "kernel_elapsed_sec": 0.000581,
+    "total_elapsed_sec": 0.015293,
+    "within_budget_1_1": true
+   }
+  }
+ }
+}

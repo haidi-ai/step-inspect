@@ -1,0 +1,16 @@
+{
+  "kind": "primitive",
+  "primitive": "box",
+  "params": {
+    "lo": [
+      0,
+      0,
+      0
+    ],
+    "hi": [
+      20,
+      20,
+      20
+    ]
+  }
+}

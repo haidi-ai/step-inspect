@@ -1,0 +1,38 @@
+{
+  "kind": "boolean",
+  "op": "subtract",
+  "a": {
+    "kind": "primitive",
+    "primitive": "box",
+    "params": {
+      "lo": [
+        -20,
+        -20,
+        0
+      ],
+      "hi": [
+        20,
+        20,
+        20
+      ]
+    }
+  },
+  "b": {
+    "kind": "primitive",
+    "primitive": "cylinder",
+    "params": {
+      "center": [
+        0,
+        0,
+        5
+      ],
+      "axis": [
+        0,
+        0,
+        1
+      ],
+      "radius": 1,
+      "height": 20
+    }
+  }
+}

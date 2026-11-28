@@ -1,0 +1,350 @@
+{
+ "schema": "znk-bench-v0/1",
+ "task": "T-1147",
+ "generated_at": "2026-11-28T20:40:52+08:00",
+ "kernel_version": "2.40.0",
+ "cli_path": "E:\\ai-crew-assets\\ZNKernel-II\\dist-2.40\\znk2_cli.exe",
+ "cli_sha256": "5bc7a310f4aa7992549218d7028069140fdbbba75ead669532232cae3be9cce1",
+ "counts": {
+  "total": 6,
+  "public": 6,
+  "internal_reference": 0
+ },
+ "public_boundary": "self-built only; no customer data; customer/internal refs deliberately excluded",
+ "recompute_notes": [
+  "cd into bench-v0 (or the public bench/ dir); relative paths resolve from there.",
+  "set ZNK2_LICENSE_FILE before running.",
+  "cannot_judge/timeout/nonzero-exit are NOT allow; compare raw JSON, not just counts."
+ ],
+ "public_cases": [
+  {
+   "id": "NA01",
+   "case": "case01-draft-0p5",
+   "kind": "na-counterexample",
+   "public": true,
+   "source": "self-built (T-1139, no customer data)",
+   "input": "inputs/case01-draft-0p5.step",
+   "input_bytes": 7627,
+   "input_sha256": "32910e47a275548749ae20e06e29d2a96d3049915701e083f8b4660c870f3fe8",
+   "rule": "manufacturing/draft_angle",
+   "request": "requests/NA01.json",
+   "recompute": "cd bench-v0; Get-Content requests/NA01.json -Raw | & $cli --json -",
+   "expected": {
+    "cli_ok": true,
+    "verdict": "reject",
+    "applicability": "applicable",
+    "verdict_summary": {
+     "allow": 0,
+     "reject": 1,
+     "cannot_judge": 0
+    },
+    "applicability_summary": {
+     "applicable": 1,
+     "not_applicable": 0,
+     "undetermined": 0
+    },
+    "evidence": {
+     "thresholdDeg": 1,
+     "processQualified": 1,
+     "judgedFaces": 4,
+     "unmeasuredFaces": 0,
+     "minDraftDeg": 0.4999999714784494,
+     "face": 2
+    },
+    "raw": "verdicts/NA01.json"
+   }
+  },
+  {
+   "id": "NA02",
+   "case": "case02-interference",
+   "kind": "na-counterexample",
+   "public": true,
+   "source": "self-built (T-1139, no customer data)",
+   "input": "inputs/case02-interference-a.step",
+   "input_bytes": 6479,
+   "input_sha256": "0d4896bba66e4cfa845ffb6302f64fd149352a47eab176b5784e0294a4fe783f",
+   "rule": "assembly/interference",
+   "request": "requests/NA02.json",
+   "recompute": "cd bench-v0; Get-Content requests/NA02.json -Raw | & $cli --json -",
+   "expected": {
+    "cli_ok": true,
+    "verdict": "reject",
+    "applicability": "applicable",
+    "verdict_summary": {
+     "allow": 0,
+     "reject": 1,
+     "cannot_judge": 0
+    },
+    "applicability_summary": {
+     "applicable": 1,
+     "not_applicable": 0,
+     "undetermined": 0
+    },
+    "evidence": {
+     "threshold": 0,
+     "band": 0.02,
+     "pair": 0,
+     "interferenceVolume": 1000.0000000000001
+    },
+    "raw": "verdicts/NA02.json"
+   }
+  },
+  {
+   "id": "NA03",
+   "case": "case03-blind-hole-ld",
+   "kind": "na-counterexample",
+   "public": true,
+   "source": "self-built (T-1139, no customer data)",
+   "input": "inputs/case03-blind-hole-ld.step",
+   "input_bytes": 8968,
+   "input_sha256": "46ba5c0192ec26db85fd03f6261aea41e85175ec2523b71adbd68105f398297f",
+   "rule": "manufacturing/hole_depth_ratio",
+   "request": "requests/NA03.json",
+   "recompute": "cd bench-v0; Get-Content requests/NA03.json -Raw | & $cli --json -",
+   "expected": {
+    "cli_ok": true,
+    "verdict": "reject",
+    "applicability": "applicable",
+    "verdict_summary": {
+     "allow": 0,
+     "reject": 1,
+     "cannot_judge": 0
+    },
+    "applicability_summary": {
+     "applicable": 1,
+     "not_applicable": 0,
+     "undetermined": 0
+    },
+    "evidence": {
+     "threshold": 5,
+     "band": 0.02,
+     "holeCount": 1,
+     "throughCount": 0,
+     "throughExcluded": 0,
+     "blindCount": 1,
+     "uncertainCount": 0,
+     "holeId": 0,
+     "depth": 15,
+     "diameter": 2,
+     "maxDepthRatio": 7.5,
+     "depthErrorBound": 1e-06
+    },
+    "raw": "verdicts/NA03.json"
+   }
+  },
+  {
+   "id": "NA04",
+   "case": "case04-wall-uneven",
+   "kind": "na-counterexample",
+   "public": true,
+   "source": "self-built (T-1139, no customer data)",
+   "input": "inputs/case04-wall-uneven.step",
+   "input_bytes": 14498,
+   "input_sha256": "01a0d8d0c2b2bb71f24a03354955b8250e88f854d5c650a6f2fb4f5a7acbedde",
+   "rule": "manufacturing/wall_thickness_uniformity",
+   "request": "requests/NA04.json",
+   "recompute": "cd bench-v0; Get-Content requests/NA04.json -Raw | & $cli --json -",
+   "expected": {
+    "cli_ok": true,
+    "verdict": "reject",
+    "applicability": "applicable",
+    "verdict_summary": {
+     "allow": 0,
+     "reject": 1,
+     "cannot_judge": 0
+    },
+    "applicability_summary": {
+     "applicable": 1,
+     "not_applicable": 0,
+     "undetermined": 0
+    },
+    "evidence": {
+     "threshold": 0.25,
+     "band": 0.02,
+     "maxWallThickness": 5,
+     "samples": 28,
+     "minThickness": 0.9999999999999999,
+     "familySamples": 8,
+     "minFamilyThickness": 0.9999999999999999,
+     "maxFamilyThickness": 3.9999999999999996,
+     "variation": 0.75
+    },
+    "raw": "verdicts/NA04.json"
+   }
+  },
+  {
+   "id": "NA05",
+   "case": "case05-opening-transition",
+   "kind": "na-counterexample",
+   "public": true,
+   "source": "self-built (T-1139, no customer data)",
+   "input": "inputs/case05-opening-transition.step",
+   "input_bytes": 5661,
+   "input_sha256": "74361bc1aba12be9f707207003eb9b6a4d228208bfbd47d25e85b1f2f80c63a5",
+   "rule": "quality/opening_radius",
+   "request": "requests/NA05.json",
+   "recompute": "cd bench-v0; Get-Content requests/NA05.json -Raw | & $cli --json -",
+   "expected": {
+    "cli_ok": true,
+    "verdict": "reject",
+    "applicability": "applicable",
+    "verdict_summary": {
+     "allow": 0,
+     "reject": 1,
+     "cannot_judge": 0
+    },
+    "applicability_summary": {
+     "applicable": 1,
+     "not_applicable": 0,
+     "undetermined": 0
+    },
+    "evidence": {
+     "threshold": 0.2,
+     "band": 0.02,
+     "requireTransition": 1,
+     "holeCount": 1,
+     "openingsMeasured": 2,
+     "uncertainCount": 0,
+     "sharpOpenings": 1,
+     "undersizedOpenings": 1,
+     "compliantOpenings": 0,
+     "bandOpenings": 0,
+     "holeId": 0,
+     "openingRadius": 0,
+     "openingErrorBound": 1e-06,
+     "minUndersizedOpening": 0.10000000000000031
+    },
+    "raw": "verdicts/NA05.json"
+   }
+  },
+  {
+   "id": "C01",
+   "case": "C01-flange",
+   "kind": "self-built-demo",
+   "public": true,
+   "source": "self-built (E:/ai-crew-assets/cases/C01-flange; task-named demo/data/C01.step absent; identical SHA copy at deploy/.../demo/data/C01.step)",
+   "input": "inputs/C01-flange.step",
+   "input_bytes": 23444,
+   "input_sha256": "9c4027e1fc48f046127b85d0e8738de75e3f4262476374bab496c291b1b2352b",
+   "rule": null,
+   "request": null,
+   "recompute": "cd bench-v0; & $cli adjudicate --file inputs/C01-flange.step",
+   "expected": {
+    "cli_ok": true,
+    "verdict_summary": {
+     "allow": 15,
+     "reject": 0,
+     "cannot_judge": 5
+    },
+    "applicability_summary": {
+     "applicable": 15,
+     "not_applicable": 5,
+     "undetermined": 0
+    },
+    "rules": [
+     {
+      "id": "manufacturing/min_wall_thickness",
+      "verdict": "allow",
+      "applicability": "applicable"
+     },
+     {
+      "id": "manufacturing/hole_penetration",
+      "verdict": "allow",
+      "applicability": "applicable"
+     },
+     {
+      "id": "manufacturing/draft_angle",
+      "verdict": "cannot_judge",
+      "applicability": "not_applicable"
+     },
+     {
+      "id": "manufacturing/sliver_face",
+      "verdict": "allow",
+      "applicability": "applicable"
+     },
+     {
+      "id": "quality/non_manifold",
+      "verdict": "allow",
+      "applicability": "applicable"
+     },
+     {
+      "id": "assembly/interference",
+      "verdict": "cannot_judge",
+      "applicability": "not_applicable"
+     },
+     {
+      "id": "manufacturing/blade_thin_section",
+      "verdict": "allow",
+      "applicability": "applicable"
+     },
+     {
+      "id": "manufacturing/hole_depth_ratio",
+      "verdict": "cannot_judge",
+      "applicability": "not_applicable"
+     },
+     {
+      "id": "manufacturing/sharp_internal_corner",
+      "verdict": "allow",
+      "applicability": "applicable"
+     },
+     {
+      "id": "quality/small_feature",
+      "verdict": "allow",
+      "applicability": "applicable"
+     },
+     {
+      "id": "manufacturing/undercut",
+      "verdict": "allow",
+      "applicability": "applicable"
+     },
+     {
+      "id": "manufacturing/min_hole_diameter",
+      "verdict": "allow",
+      "applicability": "applicable"
+     },
+     {
+      "id": "manufacturing/wall_thickness_uniformity",
+      "verdict": "cannot_judge",
+      "applicability": "not_applicable"
+     },
+     {
+      "id": "quality/stress_concentration_corner",
+      "verdict": "allow",
+      "applicability": "applicable"
+     },
+     {
+      "id": "manufacturing/missing_fillet",
+      "verdict": "allow",
+      "applicability": "applicable"
+     },
+     {
+      "id": "manufacturing/bridge_span",
+      "verdict": "allow",
+      "applicability": "applicable"
+     },
+     {
+      "id": "manufacturing/overhang_angle",
+      "verdict": "allow",
+      "applicability": "applicable"
+     },
+     {
+      "id": "manufacturing/step_height_ratio",
+      "verdict": "allow",
+      "applicability": "applicable"
+     },
+     {
+      "id": "manufacturing/residual_wall",
+      "verdict": "allow",
+      "applicability": "applicable"
+     },
+     {
+      "id": "quality/opening_radius",
+      "verdict": "cannot_judge",
+      "applicability": "not_applicable"
+     }
+    ],
+    "raw": "verdicts/C01-flange.json"
+   }
+  }
+ ]
+}

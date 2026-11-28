@@ -1,0 +1,167 @@
+{
+ "schema": "znk2-cli/1",
+ "ok": true,
+ "result": {
+  "count": 1,
+  "rule_selector": "manufacturing/draft_angle",
+  "body": {
+   "file": "E:/ai-crew-assets/cases/bench-v0/inputs/case01-draft-0p5.step"
+  },
+  "verdict_summary": {
+   "allow": 0,
+   "reject": 1,
+   "cannot_judge": 0
+  },
+  "applicability_summary": {
+   "applicable": 1,
+   "not_applicable": 0,
+   "undetermined": 0
+  },
+  "results": [
+   {
+    "id": "manufacturing/draft_angle",
+    "namespace": "manufacturing",
+    "name": "draft_angle",
+    "verdict": "reject",
+    "applicability": "applicable",
+    "rule_version": "1.0",
+    "message": "minimum draft angle is below the required threshold",
+    "evidence": [
+     {
+      "key": "thresholdDeg",
+      "value": 1,
+      "unit": "deg"
+     },
+     {
+      "key": "processQualified",
+      "value": 1,
+      "unit": "flag"
+     },
+     {
+      "key": "judgedFaces",
+      "value": 4,
+      "unit": "count"
+     },
+     {
+      "key": "unmeasuredFaces",
+      "value": 0,
+      "unit": "count"
+     },
+     {
+      "key": "minDraftDeg",
+      "value": 0.4999999714784494,
+      "unit": "deg"
+     },
+     {
+      "key": "face",
+      "value": 2,
+      "unit": "id"
+     }
+    ],
+    "mesh": {
+     "status": "not_used",
+     "reason": "",
+     "error": "",
+     "chord_tol": 0,
+     "estimated_triangles": 0,
+     "actual_triangles": 0,
+     "coarsen": 1
+    },
+    "error_bound": {
+     "epsilon": 0,
+     "margin": 0,
+     "ratio": 0,
+     "exceeded": false,
+     "gate": "not_applicable"
+    },
+    "measurement": {
+     "valid": false,
+     "value": 0,
+     "errorBound": 0,
+     "method": "none"
+    }
+   }
+  ],
+  "wall_budget": {
+   "enabled": true,
+   "exhausted": false,
+   "completed_rules": [
+    "manufacturing/draft_angle"
+   ],
+   "completed_count": 1,
+   "skipped_rules": [],
+   "skipped_count": 0,
+   "prejudged_rules": [],
+   "prejudged_count": 0,
+   "timing": {
+    "volatile": true,
+    "basis": "runtime-wall-clock",
+    "budget_sec": 119.994996,
+    "elapsed_sec": 2.2e-05,
+    "within_budget_1_1": true
+   }
+  },
+  "policy": {
+   "cannot_judge": "undecided - NOT an allow; never treat as a pass",
+   "not_applicable": "precondition absent - not an allow, not a reject"
+  },
+  "wall_budget_exhausted_rules": 0,
+  "trace": {
+   "fileSha": "ad338235268b1f1cfba51632a95674345f520a2e3baf077534d529d4b045e06d",
+   "fileShaRaw": "32910e47a275548749ae20e06e29d2a96d3049915701e083f8b4660c870f3fe8",
+   "fileShaNormalized": "ad338235268b1f1cfba51632a95674345f520a2e3baf077534d529d4b045e06d",
+   "recipeSha": "",
+   "kernelVersion": "2.40.0",
+   "ruleVersion": "1.0",
+   "threshold": {
+    "process": "injection_molding",
+    "material": "ABS",
+    "pullDirection": [
+     0,
+     0,
+     1
+    ],
+    "minAngleDeg": 1,
+    "thresholdDeg": 1
+   },
+   "licenseId": "ZNK2-INTERNAL-2028",
+   "runId": "run-1795869645802-1"
+  },
+  "cache": {
+   "hit": false,
+   "ageSec": null,
+   "ttlSec": 86400,
+   "key": "e58ce60cf775c0efa286d82e15b16c03677e6e3b5ac8384ec64c053955f08e98",
+   "enabled": false,
+   "stored": false,
+   "cacheable": false,
+   "failureKind": "",
+   "reason": "",
+   "note": "cache disabled (--no-cache or ZNK_CACHE_NEG=0)"
+  },
+  "negative_cache": {
+   "hit": false,
+   "enabled": false,
+   "key": "e58ce60cf775c0efa286d82e15b16c03677e6e3b5ac8384ec64c053955f08e98",
+   "chord": "auto",
+   "budget": "tribudget=2000000;facegate=5000;quota_ms=auto;quota_faces=0;adj_budget_ms=0;adj_wall_sec=120.000000",
+   "scope": "rule=manufacturing/draft_angle;params={\"process\":\"injection_molding\",\"material\":\"ABS\",\"pullDirection\":[0,0,1],\"minAngleDeg\":1}",
+   "ttl_sec": 86400,
+   "failure_kind": "",
+   "stored": false
+  },
+  "wall": {
+   "enabled": true,
+   "budget_sec": 120,
+   "cached": false,
+   "timing": {
+    "volatile": true,
+    "basis": "runtime-wall-clock",
+    "kernel_budget_sec": 119.994996,
+    "kernel_elapsed_sec": 2.2e-05,
+    "total_elapsed_sec": 0.008791,
+    "within_budget_1_1": true
+   }
+  }
+ }
+}

@@ -1,0 +1,19 @@
+{
+  "kernel": "ZNKernel-II 2.40.0",
+  "entry": "C ABI zn_solid_feature",
+  "request": {
+    "op": "draft",
+    "pull_dir": [
+      0,
+      0,
+      1
+    ],
+    "neutral_point": [
+      0,
+      0,
+      0
+    ],
+    "angle_deg": 0.5
+  },
+  "note": "box 40x30x20, neutral bottom, 0.5 deg draft on 4 lateral faces"
+}

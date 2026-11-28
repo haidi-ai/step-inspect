@@ -1,0 +1,12 @@
+{
+ "op": "adjudicate",
+ "file": "inputs/case02-interference-a.step",
+ "rule": "assembly/interference",
+ "cache_enabled": false,
+ "params": {
+  "maxInterferenceVolume": 0.0
+ },
+ "other_files": [
+  "inputs/case02-interference-b.step"
+ ]
+}

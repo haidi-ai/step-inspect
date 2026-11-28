@@ -1,0 +1,10 @@
+{
+ "op": "adjudicate",
+ "file": "inputs/case05-opening-transition.step",
+ "rule": "quality/opening_radius",
+ "cache_enabled": false,
+ "params": {
+  "requireTransition": true,
+  "minOpeningRadius": 0.2
+ }
+}

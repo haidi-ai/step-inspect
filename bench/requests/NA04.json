@@ -1,0 +1,10 @@
+{
+ "op": "adjudicate",
+ "file": "inputs/case04-wall-uneven.step",
+ "rule": "manufacturing/wall_thickness_uniformity",
+ "cache_enabled": false,
+ "params": {
+  "maxVariation": 0.25,
+  "maxWallThickness": 5.0
+ }
+}
